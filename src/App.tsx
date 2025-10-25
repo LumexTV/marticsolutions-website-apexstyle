@@ -11,7 +11,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Impressum from './pages/Impressum';
-import Career from './pages/Career';
 
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
           } />
           <Route path="/datenschutz" element={<PrivacyPolicy />} />
           <Route path="/impressum" element={<Impressum />} />
-          <Route path="/karriere" element={<Career />} />
         </Routes>
         <Footer />
       </div>

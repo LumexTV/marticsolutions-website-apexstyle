@@ -95,12 +95,6 @@ const Navbar: React.FC = () => {
             >
               Über uns
             </button>
-            <Link
-              to="/karriere"
-              className="transition-colors duration-200 text-gray-300 hover:text-white"
-            >
-              Karriere
-            </Link>
           </div>
 
           {/* CTA Button - Right Side */}
@@ -158,12 +152,6 @@ const Navbar: React.FC = () => {
             >
               Über uns
             </button>
-            <Link
-              to="/karriere"
-              className="block w-full text-left transition-colors duration-200 py-2 text-gray-300 hover:text-white"
-            >
-              Karriere
-            </Link>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
