@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
 
       <h3 className="text-xl font-bold mt-8 mb-2">2. Allgemeines zur Datenverarbeitung</h3>
       <p>Wir nehmen den Schutz Ihrer personenbezogenen Daten sehr ernst. Ihre Daten werden von uns vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung verarbeitet.</p>
-      <p>Die Nutzung dieser Website ist grundsätzlich ohne Angabe personenbezogener Daten möglich. Technische Zugriffsdaten werden automatisch erhoben (siehe Punkt 3). Weitere Daten werden nur verarbeitet, wenn Sie uns diese aktiv übermitteln – z. B. über das Kontaktformular.</p>
+      <p>Die Nutzung dieser Website ist grundsätzlich ohne Angabe personenbezogener Daten möglich. Technische Zugriffsdaten werden automatisch erhoben (siehe Punkt 3). Weitere Daten werden nur verarbeitet, wenn Sie uns diese aktiv übermitteln – z. B. über das Kontaktformular.</p>
       <hr className="my-4" />
 
       <h3 className="text-xl font-bold mt-8 mb-2">3. Hosting und Server-Logfiles</h3>
@@ -80,13 +80,43 @@ const PrivacyPolicy = () => {
       <hr className="my-4" />
 
       <h3 className="text-xl font-bold mt-8 mb-2">6. Sicherheit Ihrer Daten</h3>
-      <p>Unsere Website nutzt eine verschlüsselte Verbindung via SSL/TLS („https“). Darüber hinaus setzen wir gemeinsam mit unserem Hosting-Anbieter technische und organisatorische Maßnahmen ein, um Ihre Daten bestmöglich zu schützen.</p>
+      <p>Unsere Website nutzt eine verschlüsselte Verbindung via SSL/TLS („https"). Darüber hinaus setzen wir gemeinsam mit unserem Hosting-Anbieter technische und organisatorische Maßnahmen ein, um Ihre Daten bestmöglich zu schützen.</p>
       <p>Informationen zu den Maßnahmen von Hetzner:<br />🔗 <a href="https://docs.hetzner.com/de/general/others/technical-and-organizational-measures" target="_blank" className="text-blue-400 hover:text-blue-300 underline">Technische und organisatorische Maßnahmen</a></p>
       <hr className="my-4" />
 
-      <h3 className="text-xl font-bold mt-8 mb-2">7. Keine Cookies / Kein Tracking</h3>
-      <p>Diese Website verwendet <strong>keine Cookies</strong>, <strong>kein Tracking</strong> und <strong>keine eingebetteten Inhalte Dritter</strong> (z. B. Google Fonts, YouTube, Maps, etc.).</p>
-      <p>Sollten zukünftig Cookies oder Webanalyse-Tools zum Einsatz kommen, wird ein entsprechender Cookie-Banner implementiert und diese Datenschutzerklärung angepasst.</p>
+      <h3 className="text-xl font-bold mt-8 mb-2">7. Cookies und Tracking-Technologien</h3>
+      <h4 className="text-lg font-semibold mt-6 mb-2">7.1 Verwendung von Cookies</h4>
+      <p>Diese Website verwendet Cookies und ähnliche Technologien, um die Funktionalität der Website zu gewährleisten, Ihre Präferenzen zu speichern und die Nutzung zu analysieren.</p>
+      
+      <h4 className="text-lg font-semibold mt-6 mb-2">7.2 Cookie-Consent-Management</h4>
+      <p>Wir verwenden Cookiebot CMP by Usercentrics zur Verwaltung Ihrer Cookie-Einstellungen. Diese Lösung ermöglicht es Ihnen, Ihre Zustimmung zu verschiedenen Cookie-Kategorien zu erteilen oder zu verweigern.</p>
+      <p><strong>Verarbeitete Daten:</strong> Cookie-Präferenzen, Zustimmungsstatus, IP-Adresse (anonymisiert)</p>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. c DSGVO (rechtliche Verpflichtung)</p>
+      <p><strong>Anbieter:</strong> Usercentrics A/S, Dänemark</p>
+      
+      <h4 className="text-lg font-semibold mt-6 mb-2">7.3 Webanalyse mit Google Analytics</h4>
+      <p>Wir verwenden Google Analytics zur Analyse des Nutzerverhaltens auf unserer Website.</p>
+      <p><strong>Verarbeitete Daten:</strong> IP-Adresse (anonymisiert), Geräteinformationen, Seitenaufrufe, Verweildauer, Referrer-URL</p>
+      <p><strong>Zweck:</strong> Webseitenoptimierung, Nutzerverhalten analysieren</p>
+      <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</p>
+      <p><strong>Anbieter:</strong> Google LLC, USA</p>
+      <p><strong>Speicherdauer:</strong> 26 Monate</p>
+      <p><strong>Widerspruch:</strong> Sie können der Datenverarbeitung durch Google Analytics widersprechen, indem Sie das Browser-Add-on zur Deaktivierung von Google Analytics installieren oder Ihre Cookie-Einstellungen anpassen.</p>
+      
+      <h4 className="text-lg font-semibold mt-6 mb-2">7.4 Ihre Rechte und Cookie-Verwaltung</h4>
+      <p>Sie haben jederzeit die Möglichkeit, Ihre Cookie-Einstellungen zu verwalten und Ihre Einwilligung zu widerrufen:</p>
+      <p><strong>Cookie-Einstellungen ändern:</strong></p>
+      <ul className="list-disc px-8">
+        <li>Über den Cookie-Einstellungen-Link unten links auf jeder Seite unserer Website</li>
+        <li>Beim erneuten Besuch unserer Website über den Cookie-Banner</li>
+        <li>In Ihren Browser-Einstellungen</li>
+      </ul>
+      <p><strong>Widerruf der Einwilligung:</strong></p>
+      <p>Sie können Ihre erteilte Einwilligung zur Verwendung von Cookies jederzeit mit Wirkung für die Zukunft widerrufen. Bereits erhobene Daten bleiben bis zum Widerruf rechtmäßig verarbeitet.</p>
+      <p><strong>Technisch notwendige Cookies:</strong></p>
+      <p>Bei technisch notwendigen Cookies ist eine Deaktivierung nicht möglich, da diese für die Grundfunktionen der Website erforderlich sind.</p>
+      <p><strong>Browser-Einstellungen:</strong></p>
+      <p>Alternativ können Sie Cookies auch direkt in Ihren Browser-Einstellungen verwalten oder vollständig deaktivieren. Beachten Sie, dass dies die Funktionalität unserer Website beeinträchtigen kann.</p>
       <hr className="my-4" />
 
       <h3 className="text-xl font-bold mt-8 mb-2">8. Ihre Rechte</h3>
@@ -132,4 +162,3 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
-

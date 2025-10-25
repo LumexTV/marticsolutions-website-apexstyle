@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       setScrolled(window.scrollY > 50);
       
       // Aktuelle Sektion beim Scrollen erkennen
-      const sections = ['hero', 'problem', 'solution', 'plan', 'about', 'contact'];
+      const sections = ['hero', 'problem', 'plan', 'about', 'contact'];
       const scrollPosition = window.scrollY + 100; // Offset für bessere Erkennung
       
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -84,16 +84,10 @@ const Navbar: React.FC = () => {
               Das Problem
             </button>
             <button
-              onClick={() => scrollToSection('solution')}
-              className={isHomePage ? getNavLinkClass('solution') : "transition-colors duration-200 text-gray-300 hover:text-white"}
-            >
-              Die Lösung
-            </button>
-            <button
               onClick={() => scrollToSection('plan')}
               className={isHomePage ? getNavLinkClass('plan') : "transition-colors duration-200 text-gray-300 hover:text-white"}
             >
-              Der Plan
+              Lösungen
             </button>
             <button
               onClick={() => scrollToSection('about')}
@@ -101,6 +95,12 @@ const Navbar: React.FC = () => {
             >
               Über uns
             </button>
+            <Link
+              to="/karriere"
+              className="transition-colors duration-200 text-gray-300 hover:text-white"
+            >
+              Karriere
+            </Link>
           </div>
 
           {/* CTA Button - Right Side */}
@@ -147,16 +147,10 @@ const Navbar: React.FC = () => {
               Das Problem
             </button>
             <button
-              onClick={() => scrollToSection('solution')}
-              className="block w-full text-left transition-colors duration-200 py-2 text-gray-300 hover:text-white"
-            >
-              Die Lösung
-            </button>
-            <button
               onClick={() => scrollToSection('plan')}
               className="block w-full text-left transition-colors duration-200 py-2 text-gray-300 hover:text-white"
             >
-              Der Plan
+              Lösungen
             </button>
             <button
               onClick={() => scrollToSection('about')}
@@ -164,14 +158,20 @@ const Navbar: React.FC = () => {
             >
               Über uns
             </button>
-                         <motion.button
-               whileHover={{ scale: 1.05 }}
-               whileTap={{ scale: 0.95 }}
-               onClick={() => scrollToSection('contact')}
-               className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 py-3 rounded-full font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-lg shadow-cyan-500/30"
-             >
-               Gratis Beratung
-             </motion.button>
+            <Link
+              to="/karriere"
+              className="block w-full text-left transition-colors duration-200 py-2 text-gray-300 hover:text-white"
+            >
+              Karriere
+            </Link>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => scrollToSection('contact')}
+              className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 py-3 rounded-full font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+            >
+              Gratis Beratung
+            </motion.button>
           </div>
         </motion.div>
       )}

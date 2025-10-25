@@ -4,28 +4,22 @@ import { Clock, Smartphone, Settings, TrendingUp } from 'lucide-react';
 
 const benefits = [
   {
-    icon: Clock,
-    title: 'Zeit sparen & Routinearbeiten automatisieren',
-    description: 'Bis zu 80% weniger Zeit mit Büroarbeit verschwenden – mehr Zeit für Ihre Kunden und Projekte.',
-    stats: '80% Zeitersparnis'
+    icon: TrendingUp,
+    title: 'Mehr Umsatz',
+    description: 'Durch automatisierte Prozesse und effizientere Abläufe steigern Sie Ihren Umsatz um bis zu 40%.',
+    stats: '+40% Umsatz'
   },
   {
-    icon: Smartphone,
-    title: 'Digitalisierung ohne Technikstress',
-    description: 'Einfache Bedienung, die jeder versteht. Keine komplizierte Software, sondern intuitive Lösungen.',
-    stats: 'Zukunftsorientiert'
+    icon: Clock,
+    title: '3x Schnellere Projekte',
+    description: 'Automatisierte Workflows beschleunigen Ihre Projekte und reduzieren die Bearbeitungszeit drastisch.',
+    stats: '3x Schneller'
   },
   {
     icon: Settings,
-    title: 'Individuelle Lösungen für Unternehmen',
-    description: 'Maßgeschneidert für Ihre Branche und spezifischen Anforderungen.',
-    stats: 'Maßgeschneidert für Sie'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Mehr Umsatz durch Effizienz',
-    description: 'Schnellere Angebotserstellung, weniger Fehler, zufriedenere Kunden – das steigert Ihren Erfolg.',
-    stats: '+25% Effizienz'
+    title: '50% Weniger Kosten',
+    description: 'Durch Automatisierung reduzieren Sie Personalkosten und operative Ausgaben um die Hälfte.',
+    stats: '-50% Kosten'
   }
 ];
 
@@ -54,7 +48,7 @@ const Benefits = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}

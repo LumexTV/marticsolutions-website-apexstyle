@@ -1,11 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Settings, Rocket, ArrowRight } from 'lucide-react';
+import { TrendingUp, PhoneCall, Lightbulb, Zap } from 'lucide-react';
 
 const Plan: React.FC = () => {
   return (
-    <section id="plan" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="plan" className="py-20 bg-black relative">
+      {/* Subtile Hintergrund-Effekte */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-green-500/2 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-80 h-80 bg-emerald-500/2 rounded-full blur-3xl"></div>
+      </div>
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -13,101 +18,135 @@ const Plan: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Dein <span className="text-cyan-400">3-Schritte-Plan</span> zum Erfolg
+            Unsere <span className="text-cyan-400">Lösungen</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            In nur 3 einfachen Schritten verwandeln wir deine manuellen Prozesse 
-            in effiziente Automatisierungen.
+            Von der Prozessautomatisierung bis zur KI-Komplettlösung - 
+            wir bieten maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {/* Schritt 1 */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Block 1: Sales System */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="relative"
+            className="text-center"
           >
-            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 h-full hover:border-cyan-400/40 transition-all duration-300">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mb-6 mx-auto">
-                <Search className="w-8 h-8 text-white" />
+            <div 
+              className="bg-black border border-white/20 rounded-2xl p-8 h-full min-h-[200px] relative overflow-hidden group cursor-pointer transition-all duration-300 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
+              style={{
+                background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
+                backgroundSize: '200% 200%',
+                animation: 'shimmer 10s ease-in-out infinite',
+                animationDelay: '0s'
+              }}
+            >
+              {/* Hover Icon */}
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
+                <TrendingUp className="text-white/80" size={32} />
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">01</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Analyse</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Wir analysieren deine aktuellen Prozesse und identifizieren 
-                  die größten Automatisierungspotenziale für maximale Effizienz.
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">Sales System</h3>
+                <p className="text-gray-300">
+                  Automatisieren Sie Ihren Vertriebsprozess und steigern Sie Ihre Verkaufserfolge durch KI-Assistenten.
                 </p>
               </div>
             </div>
-            <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-              <ArrowRight className="w-8 h-8 text-cyan-400" />
-            </div>
           </motion.div>
 
-          {/* Schritt 2 */}
+          {/* Block 2: KI Telefonassistent */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="text-center"
           >
-            <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-8 h-full hover:border-blue-400/40 transition-all duration-300">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full mb-6 mx-auto">
-                <Settings className="w-8 h-8 text-white" />
+            <div 
+className="bg-black border border-white/20 rounded-2xl p-8 h-full min-h-[200px] relative overflow-hidden group cursor-pointer transition-all duration-300 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
+              style={{
+                background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
+                backgroundSize: '200% 200%',
+                animation: 'shimmer 10s ease-in-out infinite',
+                animationDelay: '2.5s'
+              }}
+            >
+              {/* Hover Icon */}
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
+                <PhoneCall className="text-white/80" size={32} />
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">02</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Zukunftsplan</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Wir entwickeln einen maßgeschneiderten Zukunftsplan mit 
-                  modernster Technologie, perfekt auf deine Bedürfnisse abgestimmt.
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">KI Telefonassistent</h3>
+                <p className="text-gray-300">
+                  Intelligente Telefonassistenten, die 24/7 verfügbar sind und Ihre Kundenanfragen professionell bearbeiten.
                 </p>
               </div>
             </div>
-            <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-              <ArrowRight className="w-8 h-8 text-blue-400" />
-            </div>
           </motion.div>
 
-          {/* Schritt 3 */}
+          {/* Block 3: Digitalisierungsberatung */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            className="text-center"
           >
-            <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-2xl p-8 h-full hover:border-green-400/40 transition-all duration-300">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full mb-6 mx-auto">
-                <Rocket className="w-8 h-8 text-white" />
+            <div 
+              className="bg-black border border-white/20 rounded-2xl p-8 h-full min-h-[200px] relative overflow-hidden group cursor-pointer transition-all duration-300 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
+              style={{
+                background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
+                backgroundSize: '200% 200%',
+                animation: 'shimmer 10s ease-in-out infinite',
+                animationDelay: '5s'
+              }}
+            >
+              {/* Hover Icon */}
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
+                <Lightbulb className="text-white/80" size={32} />
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">03</div>
-                <h3 className="text-2xl font-bold text-white mb-4">Umsetzung</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Wir setzen alles für dich um und begleiten dich durch die gesamte 
-                  Transformation - du konzentrierst dich auf das Wesentliche.
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">Digitalisierungsberatung</h3>
+                <p className="text-gray-300">
+                  Strategische Beratung für Ihre digitale Transformation mit maßgeschneiderten Lösungen für Ihr Unternehmen.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Block 4: Prozess Automatisierung */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center"
+          >
+            <div 
+              className="bg-black border border-white/20 rounded-2xl p-8 h-full min-h-[200px] relative overflow-hidden group cursor-pointer transition-all duration-300 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
+              style={{
+                background: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)',
+                backgroundSize: '200% 200%',
+                animation: 'shimmer 10s ease-in-out infinite',
+                animationDelay: '7.5s'
+              }}
+            >
+              {/* Hover Icon */}
+              <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-110">
+                <Zap className="text-white/80" size={32} />
+              </div>
+              
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">Prozess Automatisierung</h3>
+                <p className="text-gray-300">
+                  Automatisieren Sie repetitive Aufgaben und steigern Sie die Effizienz Ihrer Geschäftsprozesse um bis zu 80%.
                 </p>
               </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Timeline für Mobile */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="md:hidden mb-12"
-        >
-          <div className="flex justify-center space-x-4">
-            <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
-            <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-            <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-          </div>
-        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -117,10 +156,10 @@ const Plan: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Frage noch heute deinen Weg in die Zukunft an
+              Bereit für Ihre digitale Transformation?
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Fülle einfach das Formular aus und wir melden uns innerhalb von 24h zur Terminvereinbarung.
+              Kontaktieren Sie uns für eine kostenlose Erstberatung und erfahren Sie, wie wir Ihr Unternehmen optimieren können.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
               <div className="flex items-center space-x-2">

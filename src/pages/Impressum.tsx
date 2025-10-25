@@ -64,14 +64,8 @@ const Impressum = () => {
             <p className="mb-6 text-gray-300">Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.</p>
             <hr className="my-4" />
 
-            <h3 className="text-xl font-bold text-white mt-8 mb-2">Online-Streitbeilegung</h3>
-            <p className="mb-4 text-gray-300">Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:</p>
-            <p className="mb-4 text-gray-300">🔗 <a href="https://ec.europa.eu/consumers/odr" target="_blank" className="text-blue-400 hover:text-blue-300 underline">https://ec.europa.eu/consumers/odr</a></p>
-            <p className="mb-6 text-gray-300">Meine E-Mail-Adresse findest du oben im Impressum.</p>
-            <hr className="my-4" />
-
-            <h3 className="text-xl font-bold text-white mt-8 mb-2">Verbraucherschlichtung</h3>
-            <p className="mb-6 text-gray-300">Ich bin nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+            <h3 className="text-xl font-bold text-white mt-8 mb-2">Information zur Verbraucherstreitbeilegung (VSBG)</h3>
+            <p className="mb-6 text-gray-300">Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle nicht verpflichtet und nicht bereit.</p>
             <hr className="my-4" />
 
             <h3 className="text-2xl font-semibold text-white mt-8 mb-4">

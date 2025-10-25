@@ -49,18 +49,10 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('solution')}
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Die Lösung
-                </button>
-              </li>
-              <li>
-                <button
                   onClick={() => scrollToSection('plan')}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Der Plan
+                  Lösungen
                 </button>
               </li>
               <li>

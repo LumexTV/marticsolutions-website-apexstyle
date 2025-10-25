@@ -53,8 +53,13 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      <div className="max-w-4xl mx-auto px-6">
+    <section id="contact" className="py-20 bg-black relative">
+      {/* Subtile Hintergrund-Effekte */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-cyan-500/2 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-blue-500/2 rounded-full blur-3xl"></div>
+      </div>
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

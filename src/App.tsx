@@ -3,56 +3,37 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import './styles/chat-widget.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import PartnerBar from './components/PartnerBar';
 import Problem from './components/Problem';
-import Solution from './components/Solution';
 import Plan from './components/Plan';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Impressum from './pages/Impressum';
+import Career from './pages/Career';
 
-function ScrollHandler() {
-  const location = useLocation();
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const scrollTo = params.get('scroll');
-    
-    if (scrollTo) {
-      // Wait for page to render, then scroll
-      setTimeout(() => {
-        const element = document.getElementById(scrollTo);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, [location]);
-
-  return null;
-}
 
 function App() {
   return (
     <Router>
-      <div className="bg-black min-h-screen">
-        <ScrollHandler />
+      <div className="bg-black min-h-screen overflow-x-hidden">
         <Navbar />
         <Routes>
           <Route path="/" element={
             <>
               {/* Ansprechende Website-Struktur */}
               <Hero />           {/* 1. Hero (Oneliner, CTA, Bild) */}
+              <PartnerBar />     {/* 1.5. Partner Leiste */}
               <Problem />        {/* 2. Das Problem */}
-              <Solution />       {/* 3. Die Lösung */}
-              <Plan />           {/* 4. Der 3-Schritte-Plan */}
-              <About />          {/* 5. Über uns/Warum wir */}
-              <Contact />        {/* 6. Footer/Kontakt */}
+              <Plan />           {/* 3. Die Lösungen */}
+              <About />          {/* 4. Über uns/Warum wir */}
+              <Contact />        {/* 5. Footer/Kontakt */}
             </>
           } />
           <Route path="/datenschutz" element={<PrivacyPolicy />} />
           <Route path="/impressum" element={<Impressum />} />
+          <Route path="/karriere" element={<Career />} />
         </Routes>
         <Footer />
       </div>
