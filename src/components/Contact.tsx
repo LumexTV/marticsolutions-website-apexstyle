@@ -53,11 +53,11 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-black relative">
+    <section id="contact" className="py-20 bg-white relative">
       {/* Subtile Hintergrund-Effekte */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-cyan-500/2 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-blue-500/2 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/3 w-80 h-80 bg-brand-light-blue/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-blue-200/20 rounded-full blur-3xl"></div>
       </div>
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <motion.div
@@ -66,13 +66,13 @@ const Contact: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Bereit zu starten?
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-4">
+          <p className="text-xl text-gray-700 max-w-2xl mx-auto mb-4">
             Lass uns gemeinsam deine Automatisierung planen. Kostenlos und unverbindlich.
           </p>
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Wir melden uns innerhalb von 24h mit einem Terminvorschlag für ein unverbindliches Analysegespräch bei Ihnen.
           </p>
         </motion.div>
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
           {!isSubmitted ? (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-white font-semibold mb-2">
+                <label htmlFor="name" className="block text-gray-900 font-semibold mb-2">
                   Name *
                 </label>
                 <input
@@ -96,13 +96,13 @@ const Contact: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
                   placeholder="Dein vollständiger Name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-semibold mb-2">
+                <label htmlFor="email" className="block text-gray-900 font-semibold mb-2">
                   E-Mail *
                 </label>
                 <input
@@ -112,13 +112,13 @@ const Contact: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
                   placeholder="deine@email.de"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-white font-semibold mb-2">
+                <label htmlFor="phone" className="block text-gray-900 font-semibold mb-2">
                   Telefonnummer *
                 </label>
                 <input
@@ -128,13 +128,13 @@ const Contact: React.FC = () => {
                   value={formData.telefonnummer}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
                   placeholder="+49 123 456789"
                 />
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-white font-semibold mb-2">
+                <label htmlFor="company" className="block text-gray-900 font-semibold mb-2">
                   Firmenname *
                 </label>
                 <input
@@ -144,13 +144,13 @@ const Contact: React.FC = () => {
                   value={formData.firmenname}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
                   placeholder="Name deines Unternehmens"
                 />
               </div>
 
               <div>
-                <label htmlFor="website" className="block text-white font-semibold mb-2">
+                <label htmlFor="website" className="block text-gray-900 font-semibold mb-2">
                   Website *
                 </label>
                 <input
@@ -160,13 +160,13 @@ const Contact: React.FC = () => {
                   value={formData.website}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
                   placeholder="ihre-website.de"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white font-semibold mb-2">
+                <label htmlFor="message" className="block text-gray-900 font-semibold mb-2">
                   Nachricht
                 </label>
                 <textarea
@@ -175,7 +175,7 @@ const Contact: React.FC = () => {
                   value={formData.nachricht}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors resize-none"
                   placeholder="Erzähle uns kurz von deinen Herausforderungen..."
                 />
               </div>
@@ -186,11 +186,11 @@ const Contact: React.FC = () => {
                   id="terms"
                   checked={agreedToTerms}
                   onChange={(e) => setAgreedToTerms(e.target.checked)}
-                  className="mt-1 w-4 h-4 text-cyan-400 bg-gray-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
+                  className="mt-1 w-4 h-4 text-brand-light-blue bg-white border-gray-300 rounded focus:ring-brand-light-blue focus:ring-2"
                 />
-                <label htmlFor="terms" className="text-sm text-gray-300">
+                <label htmlFor="terms" className="text-sm text-gray-700">
                   Ich stimme der{' '}
-                  <Link to="/datenschutz" className="text-cyan-400 hover:text-cyan-300 underline">
+                  <Link to="/datenschutz" className="text-brand-light-blue hover:text-blue-600 underline">
                     Datenschutzerklärung
                   </Link>{' '}
                   zu.
@@ -201,9 +201,9 @@ const Contact: React.FC = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black py-4 rounded-lg font-bold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+                className="w-full py-4 px-8 bg-gradient-to-r from-brand-light-blue to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-brand-light-blue/25 transition-all duration-300"
               >
-                Beratung anfragen
+                Nachricht senden
               </motion.button>
             </form>
           ) : (
@@ -212,9 +212,9 @@ const Contact: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               className="text-center py-8"
             >
-              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Vielen Dank!</h3>
-              <p className="text-gray-300">
+              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Vielen Dank!</h3>
+              <p className="text-gray-700">
                 Wir melden uns innerhalb von 24 Stunden bei dir.
               </p>
             </motion.div>

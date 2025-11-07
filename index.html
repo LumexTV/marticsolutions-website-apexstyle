@@ -6,8 +6,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Impact:wght@400&display=swap" rel="stylesheet">
     
-    <!-- Cookiebot Banner - Saubere Implementierung -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="5672dad7-bf17-49bd-b39f-9946569f7734" data-blockingmode="auto" data-culture="DE" type="text/javascript"></script>
+    <!-- Cookiebot nur in Produktion laden -->
+    <script>
+      (function() {
+        var host = window.location.hostname;
+        var isProd = host === 'marticsolutions.de' || host === 'www.marticsolutions.de';
+        if (isProd) {
+          var s = document.createElement('script');
+          s.id = 'Cookiebot';
+          s.src = 'https://consent.cookiebot.com/uc.js';
+          s.type = 'text/javascript';
+          s.setAttribute('data-cbid', '5672dad7-bf17-49bd-b39f-9946569f7734');
+          s.setAttribute('data-blockingmode', 'auto');
+          s.setAttribute('data-culture', 'DE');
+          document.head.appendChild(s);
+        }
+      })();
+    </script>
     
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -46,6 +61,9 @@
 
     <!-- ✅ Canonical Link -->
     <link rel="canonical" href="https://marticsolutions.de" />
+
+    <!-- ✅ Preload wichtiges LCP-Bild (Logo) -->
+    <link rel="preload" as="image" href="/images/logo-no-bg.png" fetchpriority="high" />
 
     <!-- ✅ Robots -->
     <meta name="robots" content="index, follow" />
@@ -179,7 +197,7 @@
     }
     </script>
     
-    <!-- Base styles for black background -->
+    <!-- Base styles aligned to light theme -->
     <style>
       /* Base Styles */
       * {
@@ -191,8 +209,8 @@
         padding: 0;
         min-height: 100vh;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: #000000;
-        color: #ffffff;
+        background-color: #f8fafc; /* Tailwind gray-50 */
+        color: #111827; /* Tailwind gray-900 */
       }
       
       #root {
@@ -204,24 +222,47 @@
     <!-- n8n Chat CSS -->
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
-    <!-- Google Consent Mode (MUSS vor Google Analytics stehen) -->
-    <script data-cookieconsent="ignore">
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("consent", "default", {
-        ad_personalization: "denied",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        analytics_storage: "denied",
-        functionality_storage: "denied",
-        personalization_storage: "denied",
-        security_storage: "granted",
-        wait_for_update: 500,
-      });
-      gtag("set", "ads_data_redaction", true);
-      gtag("set", "url_passthrough", false);
+    <!-- Consent Mode & GA nur in Produktion laden -->
+    <script>
+      (function() {
+        var host = window.location.hostname;
+        var isProd = host === 'marticsolutions.de' || host === 'www.marticsolutions.de';
+        if (!isProd) return;
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+
+        // Consent Mode default
+        gtag('consent', 'default', {
+          ad_personalization: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          analytics_storage: 'denied',
+          functionality_storage: 'denied',
+          personalization_storage: 'denied',
+          security_storage: 'granted',
+          wait_for_update: 500,
+        });
+        gtag('set', 'ads_data_redaction', true);
+        gtag('set', 'url_passthrough', false);
+
+        // GA laden
+        var ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-6V31WG08CF';
+        document.head.appendChild(ga);
+
+        // GA Konfiguration
+        gtag('js', new Date());
+        gtag('config', 'G-6V31WG08CF', {
+          page_title: 'Martic Solutions - KI-Automatisierung für Unternehmen',
+          page_location: 'https://marticsolutions.de',
+          custom_map: {
+            'custom_parameter_1': 'business_type',
+            'custom_parameter_2': 'service_interest'
+          }
+        });
+      })();
     </script>
     
 
@@ -230,66 +271,71 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6V31WG08CF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-             gtag('config', 'G-6V31WG08CF', {
-         page_title: 'Martic Solutions - KI-Automatisierung für Unternehmen',
-         page_location: 'https://marticsolutions.de',
-         custom_map: {
-           'custom_parameter_1': 'business_type',
-           'custom_parameter_2': 'service_interest'
-         }
-       });
-    </script>
+    <!-- GA wird oben konditional geladen -->
 
-    <!-- n8n Chat Script -->
+    <!-- n8n Chat Script (lazy-load bei Interaktion oder Idle) -->
     <script type="module">
-      import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+      let chatInitialized = false;
 
-      createChat({
-        webhookUrl: 'https://n8n.marticsolutions.de/webhook/d552c7ae-632d-4308-823f-04b26ae22544/chat',
-        webhookConfig: {
-          method: 'POST',
-          headers: {}
-        },
-        target: '#n8n-chat',
-        mode: 'window',
-        chatInputKey: 'chatInput',
-        chatSessionKey: 'sessionId',
-        loadPreviousSession: true,
-        metadata: {
-          website: 'marticsolutions.de',
-          source: 'landingpage'
-        },
-        showWelcomeScreen: true,
-        defaultLanguage: 'de',
-        initialMessages: [
-          'Hallo! 👋',
-          'Ich stehe dir für alle Fragen zur Seite. Wie kann ich dir heute helfen?'
-        ],
-                 i18n: {
-           de: {
-             title: 'Martic Solutions Chat Support',
-             subtitle: 'Stelle gerne alle deine Fragen. Ich helfe dir gerne weiter!',
-             footer: '',
-             getStarted: 'Neue Unterhaltung',
-             inputPlaceholder: 'Wie kann ich dir helfen?',
-           },
-           en: {
-             title: 'Martic Solutions Chat 💬',
-             subtitle: 'Ask us about automation. We\'re here to help!',
-             footer: '',
-             getStarted: 'New Conversation',
-             inputPlaceholder: 'How can I help you?',
-           }
-         },
-                 enableStreaming: false,
-        allowFileUploads: false
-      });
+      const initChat = async () => {
+        if (chatInitialized) return;
+        chatInitialized = true;
+
+        const { createChat } = await import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js');
+        createChat({
+          webhookUrl: 'https://n8n.marticsolutions.de/webhook/d552c7ae-632d-4308-823f-04b26ae22544/chat',
+          webhookConfig: {
+            method: 'POST',
+            headers: {}
+          },
+          target: '#n8n-chat',
+          mode: 'window',
+          chatInputKey: 'chatInput',
+          chatSessionKey: 'sessionId',
+          loadPreviousSession: true,
+          metadata: {
+            website: 'marticsolutions.de',
+            source: 'landingpage'
+          },
+          showWelcomeScreen: true,
+          defaultLanguage: 'de',
+          initialMessages: [
+            'Hallo! 👋',
+            'Ich stehe dir für alle Fragen zur Seite. Wie kann ich dir heute helfen?'
+          ],
+          i18n: {
+            de: {
+              title: 'Martic Solutions Chat Support',
+              subtitle: 'Stelle gerne alle deine Fragen. Ich helfe dir gerne weiter!',
+              footer: '',
+              getStarted: 'Neue Unterhaltung',
+              inputPlaceholder: 'Wie kann ich dir helfen?',
+            },
+            en: {
+              title: 'Martic Solutions Chat 💬',
+              subtitle: 'Ask us about automation. We\'re here to help!',
+              footer: '',
+              getStarted: 'New Conversation',
+              inputPlaceholder: 'How can I help you?',
+            }
+          },
+          enableStreaming: false,
+          allowFileUploads: false
+        });
+      };
+
+      const lazyTrigger = () => initChat();
+      window.addEventListener('pointerdown', lazyTrigger, { once: true });
+      window.addEventListener('keydown', lazyTrigger, { once: true });
+      window.addEventListener('touchstart', lazyTrigger, { once: true });
+
+      if ('requestIdleCallback' in window) {
+        // Fallback: Nach Idle laden (Timeout, falls nie Interaktion erfolgt)
+        // @ts-ignore
+        requestIdleCallback(() => { if (!chatInitialized) initChat(); }, { timeout: 5000 });
+      } else {
+        setTimeout(() => { if (!chatInitialized) initChat(); }, 5000);
+      }
     </script>
     
     <!-- Chat Widget Container -->

@@ -5,8 +5,8 @@ import { BarChart3, FileText, Calendar, Workflow } from 'lucide-react';
 const automationFeatures = [
   {
     icon: BarChart3,
-    title: 'Ersetzt eine ganze Stelle',
-    description: 'Läuft 24/7 für Sie im Hintergrund - Sie brauchen sich keine Gedanken mehr, um langweilige Prozesse zu machen.',
+    title: 'Skaliert wiederkehrende Aufgaben zuverlässig',
+    description: 'Zuverlässig im Hintergrund ausgeführt – entlastet von Routinetätigkeiten und schafft Zeit für Kernaufgaben.',
     color: 'from-cyan-500 to-blue-500'
   },
   {
@@ -18,13 +18,13 @@ const automationFeatures = [
   {
     icon: Calendar,
     title: 'Smarte Terminplanung',
-    description: 'Intelligente Terminkoordination mit Kunden, Lieferanten und Ihrem Team.',
+    description: 'Kundentermine und interne Abstimmungen koordiniert – transparent und verlässlich.',
     color: 'from-cyan-400 to-blue-400'
   },
   {
     icon: Workflow,
     title: 'Automatisierte Workflows',
-    description: 'Weniger Bürokratie, mehr Zeit für echte Arbeit – Routineaufgaben laufen von selbst.',
+    description: 'Routineaufgaben standardisiert abbilden – konsistente Abläufe und weniger Fehlerquellen.',
     color: 'from-blue-400 to-cyan-400'
   }
 ];
@@ -46,7 +46,7 @@ const Automation = () => {
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 px-4">
             Unsere Lösungen –{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(34,211,238,0.5)]">Ihre Zeitersparnis</span>
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Ihre Zeitersparnis</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
             Entdecken Sie, wie KI-Automatisierung Ihr Unternehmen 
@@ -62,7 +62,7 @@ const Automation = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 shadow-2xl shadow-cyan-500/10 hover:shadow-cyan-500/20 hover:border-cyan-500/30 transition-all duration-300"
+              className="bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 shadow-xl hover:shadow-2xl hover:border-cyan-500/30 transition-all duration-300"
             >
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
@@ -88,7 +88,7 @@ const Automation = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-cyan-500/30 shadow-2xl shadow-cyan-500/20 text-white rounded-2xl p-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm border border-cyan-500/30 shadow-xl text-white rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-xl sm:text-2xl font-bold mb-4 text-cyan-400">
               Mehr Zeit für echte Arbeit
             </h3>
@@ -100,12 +100,12 @@ const Automation = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
-                const element = document.getElementById('kontakt');
+                const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 sm:px-8 py-3 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm sm:text-base shadow-lg shadow-cyan-500/25"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 sm:px-8 py-3 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm sm:text-base shadow-lg"
             >
-              Kontaktieren Sie uns
+              Kostenlose Erstberatung
             </motion.button>
           </div>
         </motion.div>

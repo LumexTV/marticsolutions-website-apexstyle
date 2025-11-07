@@ -12,7 +12,13 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Shimmer Animation für Gold-Effekt */
+/* Neues Farbschema: Weißer Hintergrund, schwarze Schrift, helleblaue Akzente */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Shimmer Animation für Akzent-Effekte */
 @keyframes shimmer {
   0% {
     background-position: -200% 0;
@@ -25,4 +31,25 @@ html, body {
 /* Pausiere Animation beim Hover */
 .group:hover {
   animation-play-state: paused !important;
+}
+
+/* Custom Utilities für neues Design */
+@layer utilities {
+  .text-brand {
+    @apply text-black;
+  }
+  
+  .bg-brand {
+    @apply bg-white;
+  }
+  
+  .accent-brand {
+    @apply text-brand-light-blue;
+  }
+  
+  .bg-accent {
+    @apply bg-brand-light-blue;
+  }
+
+  /* (Entfernt) Spezielle Text-Glow/Inset-Effekte – nicht verwendet */
 }

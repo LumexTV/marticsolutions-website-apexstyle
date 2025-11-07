@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
     }
   };
   return (
-    <footer className="bg-black border-t border-gray-800">
+    <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo and Company Info */}
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             <Link to="/" className="mb-6 inline-block">
               <Logo size="md" showText={true} />
             </Link>
-            <p className="text-gray-400 mb-4 max-w-md">
+            <p className="text-gray-600 mb-4 max-w-md">
               Wir automatisieren Ihre Prozesse mit modernster Technologie und geben Ihnen 
               die Zeit zurück, die Sie für Wachstum brauchen.
             </p>
@@ -37,12 +37,12 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Schnellzugriff</h3>
+            <h3 className="text-gray-900 font-semibold mb-4">Schnellzugriff</h3>
             <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => scrollToSection('problem')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
                 >
                   Das Problem
                 </button>
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('plan')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
                 >
                   Lösungen
                 </button>
@@ -58,9 +58,17 @@ const Footer: React.FC = () => {
               <li>
                 <button
                   onClick={() => scrollToSection('about')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
                 >
                   Über uns
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('faq')}
+                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
+                >
+                  FAQ
                 </button>
               </li>
             </ul>
@@ -68,22 +76,32 @@ const Footer: React.FC = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Rechtliches</h3>
+            <h3 className="text-gray-900 font-semibold mb-4">Rechtliches</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/impressum" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  to="/impressum"
+                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
+                  onMouseEnter={() => import('../pages/Impressum')}
+                  onFocus={() => import('../pages/Impressum')}
+                >
                   Impressum
                 </Link>
               </li>
               <li>
-                <Link to="/datenschutz" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  to="/datenschutz"
+                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
+                  onMouseEnter={() => import('../pages/PrivacyPolicy')}
+                  onFocus={() => import('../pages/PrivacyPolicy')}
+                >
                   Datenschutz
                 </Link>
               </li>
               <li>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
                 >
                   Kontakt
                 </button>
@@ -92,8 +110,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+        <div className="border-t border-gray-200 mt-8 pt-8 text-center">
+          <p className="text-gray-600">
             © 2025 Martic Solutions. Alle Rechte vorbehalten.
           </p>
         </div>
