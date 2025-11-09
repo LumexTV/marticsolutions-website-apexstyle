@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'impact': ['Impact', 'sans-serif'],
+        // Entfernt: Impact (Google Fonts). Falls benötigt, lokal hosten und hier referenzieren.
       },
       colors: {
         // Neues Farbschema: Weißer Hintergrund, schwarze Schrift, helleblaue Akzente
