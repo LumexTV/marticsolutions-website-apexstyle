@@ -13,26 +13,26 @@ const faqs: FAQItem[] = [
     q: 'Was macht Martic Solutions im Bereich KI‑Automatisierung genau?',
     a: (
       <p>
-        Wir planen und implementieren KI‑gestützte Prozessautomatisierung in ihr Unternehmen – von der Analyse bis zum Go‑Live.
-        Im Fokus: Backoffice‑Workflows, <strong>Speed‑to‑Lead</strong> im Vertrieb und stabile, <strong>DSGVO‑sensible</strong> Lösungen. Alles, was sie vom skalieren abhält und unnötig Zeit frisst.
+        Wir planen und implementieren KI‑gestützte Prozessautomatisierung in Ihr Unternehmen – von der Analyse bis zum Go‑Live.
+        Im Fokus: Backoffice‑Workflows, <strong>Speed‑to‑Lead</strong> im Vertrieb und stabile, <strong>DSGVO‑sensible</strong> Lösungen. Alles, was Sie vom Skalieren abhält und unnötig Zeit frisst.
       </p>
     ),
     aText:
-      'Wir planen und implementieren KI‑gestützte Prozessautomatisierung in ihr Unternehmen – von der Analyse bis zum Go‑Live. Fokus: Backoffice‑Workflows, Speed‑to‑Lead im Vertrieb und stabile, DSGVO‑sensible Lösungen. Alles, was sie vom skalieren abhält und unnötig Zeit frisst.',
+      'Wir planen und implementieren KI‑gestützte Prozessautomatisierung in Ihr Unternehmen – von der Analyse bis zum Go‑Live. Fokus: Backoffice‑Workflows, Speed‑to‑Lead im Vertrieb und stabile, DSGVO‑sensible Lösungen. Alles, was Sie vom Skalieren abhält und unnötig Zeit frisst.',
   },
   {
     q: 'Für welche Unternehmen ist KI‑Automatisierung mit n8n geeignet?',
     a: (
       <p>
         Für <strong>KMU, Agenturen und wachsende Teams</strong> in DACH, die wiederkehrende Aufgaben wie E‑Mail, Dokumente, CRM und Support
-        automatisieren und ihre Vertriebsprozesse beschleunigen wollen – ohne monatelange Großprojekte.
+        automatisieren und Ihre Vertriebsprozesse beschleunigen wollen – ohne monatelange Großprojekte.
       </p>
     ),
     aText:
       'Für KMU, Agenturen und wachsende Teams in DACH, die wiederkehrende Aufgaben wie E‑Mail, Dokumente, CRM und Support automatisieren und Vertriebsprozesse beschleunigen wollen – ohne monatelange Großprojekte.',
   },
   {
-    q: 'Welche Use Cases automatisiert ihr am häufigsten?',
+    q: 'Welche Use Cases automatisieren Sie am häufigsten?',
     a: (
       <ul className="list-disc pl-6 space-y-1">
         <li>Backoffice: E‑Mail‑Triage, Dokument‑/Rechnungsextraktion, automatische Ablage, Reporting</li>
@@ -48,8 +48,8 @@ const faqs: FAQItem[] = [
     a: (
       <ol className="list-decimal pl-6 space-y-1">
         <li>Kostenloses Erstgespräch: Ziele, Pain Points</li>
-        <li>Workshop: Workshop in dem wir ihre größten Bottlenecks ausarbeiten und einen Fahrplan für die Zukunft kreieren</li>
-        <li>Umsetzung aller geplanten Pojekte, Stück für Stück, damit sie sofort profitieren</li>
+        <li>Workshop: Workshop in dem wir Ihre größten Bottlenecks ausarbeiten und einen Fahrplan für die Zukunft kreieren</li>
+        <li>Umsetzung aller geplanten Projekte, Stück für Stück, damit Sie sofort profitieren</li>
         <li>KPI‑Messung, Doku, Handover; optional kontinuierliche Verbesserung</li>
       </ol>
     ),
@@ -70,7 +70,7 @@ const faqs: FAQItem[] = [
       'Zeitersparnis bei repetitiven Aufgaben, je nach Prozess; schnellere Lead‑Response (Speed‑to‑Lead); geringere Fehlerrate und stabilere Prozesse dank Monitoring/Alerts. Umsatzsteigerung durch unsere ausgeklügelten Lead-Gewinnungssysteme und Social Media Posts.',
   },
   {
-    q: 'Wie messt ihr den Erfolg der Automatisierung?',
+    q: 'Wie messen Sie den Erfolg der Automatisierung?',
     a: (
       <ul className="list-disc pl-6 space-y-1">
         <li>Zeit pro Vorgang, vor und nach</li>

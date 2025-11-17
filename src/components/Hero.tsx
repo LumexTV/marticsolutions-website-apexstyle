@@ -283,7 +283,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl text-gray-800 font-bold mt-8"
             >
-              Skalieren durch Automatisierungen
+              Skalieren durch Automatisierung
             </motion.p>
           </div>
 

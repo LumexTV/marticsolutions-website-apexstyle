@@ -13,11 +13,11 @@ const Guide: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Wir sind dein <span className="text-cyan-400">weiser Führer</span>
+            Wir sind Ihr <span className="text-cyan-400">weiser Führer</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Martic Solutions ist dein erfahrener Partner auf dem Weg zur Automatisierung. 
-            Wir verstehen deine Herausforderungen und haben die Lösungen, die du brauchst.
+            Martic Solutions ist Ihr erfahrener Partner auf dem Weg zur Automatisierung. 
+            Wir verstehen Ihre Herausforderungen und haben die Lösungen, die Sie brauchen.
           </p>
         </motion.div>
 
@@ -30,7 +30,7 @@ const Guide: React.FC = () => {
             className="space-y-6"
           >
             <h3 className="text-3xl font-bold text-white mb-6">
-              Warum wir dein vertrauenswürdiger Partner sind
+              Warum wir Ihr vertrauenswürdiger Partner sind
             </h3>
             
             <div className="space-y-4">
@@ -55,7 +55,7 @@ const Guide: React.FC = () => {
                   <h4 className="text-xl font-semibold text-white mb-2">Individuelle Lösungen</h4>
                   <p className="text-gray-300">
                     Jedes Unternehmen ist einzigartig. Wir entwickeln maßgeschneiderte 
-                    Automatisierungslösungen, die perfekt zu deinen Prozessen passen.
+                    Automatisierungslösungen, die perfekt zu Ihren Prozessen passen.
                   </p>
                 </div>
               </div>
@@ -67,8 +67,8 @@ const Guide: React.FC = () => {
                 <div>
                   <h4 className="text-xl font-semibold text-white mb-2">Persönliche Betreuung</h4>
                   <p className="text-gray-300">
-                    Du arbeitest direkt mit unserem Team zusammen. Wir sind für dich da 
-                    und begleiten dich durch den gesamten Prozess.
+                    Sie arbeiten direkt mit unserem Team zusammen. Wir sind für Sie da 
+                    und begleiten Sie durch den gesamten Prozess.
                   </p>
                 </div>
               </div>
@@ -119,11 +119,11 @@ const Guide: React.FC = () => {
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Wir glauben an deinen Erfolg
+              Wir glauben an Ihren Erfolg
             </h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Dein Erfolg ist unser Erfolg. Wir sind nicht nur dein Dienstleister, 
-              sondern dein Partner auf dem Weg zur digitalen Transformation.
+              Ihr Erfolg ist unser Erfolg. Wir sind nicht nur Ihr Dienstleister, 
+              sondern Ihr Partner auf dem Weg zur digitalen Transformation.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -131,7 +131,7 @@ const Guide: React.FC = () => {
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-8 py-4 rounded-full text-lg font-bold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl shadow-cyan-500/30"
             >
-              Vertraue uns deine Automatisierung an
+              Vertrauen Sie uns Ihre Automatisierung an
             </motion.button>
           </div>
         </motion.div>

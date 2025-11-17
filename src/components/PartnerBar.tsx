@@ -2,14 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const PartnerBar: React.FC = () => {
-  // Alle Partner in einer Liste mit n8n in der Mitte (Index 2)
+  // Alle Partner in einer Liste mit n8n in der Mitte (Index 3)
   const partners = [
     { name: 'fonio', logo: '/images/partner/fonio.svg', link: 'https://fonio.ai?ac=KQOOJKJ7H7' },
     { name: 'hubspot', logo: '/images/partner/hubspot.svg', link: 'https://www.hubspot.com/' },
+    { name: 'apify', logo: '/images/partner/apify.svg', link: 'https://apify.com/?fpr=lukamrtc' },
     { name: 'n8n', logo: '/images/partner/n8n.svg', link: 'https://n8n.io/' },
     { name: 'instantly', logo: '/images/partner/instantly.svg', link: 'https://refer.instantly.ai/6al8blq7ki31' },
-    { name: 'manychat', logo: '/images/partner/manychat.svg', link: 'https://manychat.partnerlinks.io/qiodmdgmxxvl' },
-    { name: 'hetzner', logo: '/images/partner/hetzner.svg', link: 'https://hetzner.cloud/?ref=biFp6lkCbmT0' }
+    { name: 'hetzner', logo: '/images/partner/hetzner.svg', link: 'https://hetzner.cloud/?ref=biFp6lkCbmT0' },
+    { name: 'manychat', logo: '/images/partner/manychat.svg', link: 'https://manychat.partnerlinks.io/qiodmdgmxxvl' }
   ];
 
   return (
@@ -35,9 +36,17 @@ const PartnerBar: React.FC = () => {
           className="flex items-center justify-center gap-12 md:gap-16"
         >
           {partners.map((partner, index) => {
-            const isSponsored = /ref=|partnerlinks|refer\./.test(partner.link) || ['fonio','instantly','manychat','hetzner'].includes(partner.name);
-            const logoHeightClass = partner.name === 'n8n' ? 'h-10' : partner.name === 'hetzner' ? 'h-9' : 'h-8';
-            const pixelHeight = partner.name === 'n8n' ? 40 : partner.name === 'hetzner' ? 36 : 32;
+            const isSponsored = /ref=|partnerlinks|refer\.|fpr=/.test(partner.link) || ['fonio','instantly','manychat','hetzner','apify'].includes(partner.name);
+            const logoHeightClass =
+              partner.name === 'n8n' ? 'h-10' :
+              partner.name === 'apify' ? 'h-12' :
+              partner.name === 'hetzner' ? 'h-9' :
+              'h-8';
+            const pixelHeight =
+              partner.name === 'n8n' ? 40 :
+              partner.name === 'apify' ? 40 :
+              partner.name === 'hetzner' ? 36 :
+              32;
             const ariaLabel = `Partner: ${partner.name} (öffnet in neuem Tab)`;
             const title = `Partner: ${partner.name} (öffnet in neuem Tab)`;
 
@@ -52,7 +61,7 @@ const PartnerBar: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center group"
+                className="flex items-center justify-center group w-24 md:w-28"
                 aria-label={ariaLabel}
                 title={title}
               >

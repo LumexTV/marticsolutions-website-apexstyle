@@ -70,7 +70,7 @@ const Contact: React.FC = () => {
             Bereit zu starten?
           </h2>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto mb-4">
-            Lass uns gemeinsam deine Automatisierung planen. Kostenlos und unverbindlich.
+            Lassen Sie uns gemeinsam Ihre Automatisierung planen. Kostenlos und unverbindlich.
           </p>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Wir melden uns innerhalb von 24h mit einem Terminvorschlag für ein unverbindliches Analysegespräch bei Ihnen.
@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
-                  placeholder="Dein vollständiger Name"
+                  placeholder="Ihr vollständiger Name"
                 />
               </div>
 
@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
-                  placeholder="deine@email.de"
+                  placeholder="ihre@email.de"
                 />
               </div>
 
@@ -145,7 +145,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors"
-                  placeholder="Name deines Unternehmens"
+                  placeholder="Name Ihres Unternehmens"
                 />
               </div>
 
@@ -176,7 +176,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:border-brand-light-blue focus:outline-none transition-colors resize-none"
-                  placeholder="Erzähle uns kurz von deinen Herausforderungen..."
+                  placeholder="Erzählen Sie uns kurz von Ihren Herausforderungen..."
                 />
               </div>
 
@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
               <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Vielen Dank!</h3>
               <p className="text-gray-700">
-                Wir melden uns innerhalb von 24 Stunden bei dir.
+                Wir melden uns innerhalb von 24 Stunden bei Ihnen.
               </p>
             </motion.div>
           )}

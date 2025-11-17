@@ -22,8 +22,8 @@ const Problem: React.FC = () => {
             Das <span className="text-red-500">Problem</span> kennen wir alle
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Während du wertvolle Zeit mit wiederkehrenden Aufgaben verbringst, 
-            zieht deine Konkurrenz an dir vorbei.
+            Während Sie wertvolle Zeit mit wiederkehrenden Aufgaben verbringen, 
+            zieht Ihre Konkurrenz an Ihnen vorbei.
           </p>
         </motion.div>
 
@@ -40,7 +40,7 @@ const Problem: React.FC = () => {
                       { icon: Clock, text: '8h/Woche verschwendet', subtext: 'mit Routineaufgaben' },
                       { icon: TrendingDown, text: 'Konkurrenz zieht vorbei', subtext: 'durch Effizienz' },
                       { icon: DollarSign, text: 'Versteckte Kosten', subtext: 'durch Ineffizienz' },
-                      { icon: AlertTriangle, text: 'Team überlastet', subtext: 'mit repetitiven Tasks' }
+                      { icon: AlertTriangle, text: 'Team überlastet', subtext: 'mit wiederkehrenden Aufgaben' }
                     ].map((item, index) => (
                       <motion.div
                         key={index}

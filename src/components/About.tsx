@@ -65,13 +65,13 @@ const About: React.FC = () => {
       id: 2,
       name: "Angelo Arena",
       company: "",
-      text: "Martic Solutions hat uns geholfen, unsere tägliche Aufgaben zu automatisieren. Jeden Tag haben wir erneuten Nutzen von den Projekten."
+      text: "Martic Solutions hat uns geholfen, unsere täglichen Aufgaben zu automatisieren. Wir profitieren täglich von den Automatisierungen."
     },
     {
       id: 3,
       name: "Lennard Meder",
-      company: "Alpha Energieausweise",
-      text: "Durch die Automatisierung konnten wir viele Kosten sparen und haben tatsächlich automatisiert neue Umsätze generieren können!"
+      company: "Alpha Energieausweis",
+      text: "Durch die Automatisierung konnten wir viele Kosten sparen und konnten tatsächlich automatisiert erhöhte Umsätze erzielen!"
     },
     {
       id: 4,
@@ -97,7 +97,7 @@ const About: React.FC = () => {
     {
       icon: Zap,
       number: `${counters.projekte}x`,
-      title: 'Schnellere Projektabschließung'
+      title: 'Schnellere Projektabwicklung'
     },
     {
       icon: Clock,
@@ -200,7 +200,7 @@ const About: React.FC = () => {
               </motion.div>
             </div>
 
-            {/* Video Testimonial 2 - Text Links, Video Rechts */}
+            {/* Video Testimonial 2 - Text Links, Video Rechts (Alpha Energieausweise) */}
             <div className="grid md:grid-cols-2 gap-12 items-center md:mr-8">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -212,19 +212,19 @@ const About: React.FC = () => {
                   <div className="text-center">
                     <div className="text-6xl text-brand-light-blue mb-6">"</div>
                     <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                    Mit den KI-Workflows von Martic Solutions sparen wir Zeit beim Social Media, erhalten mehr qualifizierte Kundenanfragen und steigern unseren Umsatz.
+                      Wir haben unsere Leadgenerierung automatisiert, wordurch wir enorme Kosten sparen. Zudem haben wir nun neue Systeme, die unsere Umsätze um 40% steigern.
                     </p>
-                      <div className="border-t border-gray-200 pt-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">Thomas Szalai</h4>
-                        <a 
-                          href="https://www.linkedin.com/in/thomas-szalai-1372b8352/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-brand-light-blue font-semibold hover:text-brand-blue transition-colors duration-300"
-                        >
-                          Immobilienmakler
-                        </a>
-                      </div>
+                    <div className="border-t border-gray-200 pt-6">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2">Lennard Meder</h4>
+                      <a 
+                        href="https://alpha-energieausweis.de/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-brand-light-blue font-semibold hover:text-brand-blue transition-colors duration-300"
+                      >
+                        Alpha Energieausweis
+                      </a>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -237,13 +237,63 @@ const About: React.FC = () => {
               >
                 <div className="bg-gray-50 rounded-2xl overflow-hidden h-80 border border-gray-200">
                   <iframe
-                    src="https://www.youtube.com/embed/SjBqsP5naxs?rel=0&modestbranding=1&showinfo=0"
+                    src="https://www.youtube.com/embed/tcDBXXDK4LI?rel=0&modestbranding=1&showinfo=0"
                     title="Kunden Testimonial 2"
                     className="w-full h-full"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Video Testimonial 3 - Video Links, Text Rechts (Thomas Szalai) */}
+            <div className="grid md:grid-cols-2 gap-12 items-center md:mr-8">
+              {/* Video links */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <div className="bg-gray-50 rounded-2xl overflow-hidden h-80 border border-gray-200">
+                  <iframe
+                    src="https://www.youtube.com/embed/SjBqsP5naxs?rel=0&modestbranding=1&showinfo=0"
+                    title="Kunden Testimonial 3"
+                    className="w-full h-full"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </motion.div>
+
+              {/* Text rechts */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="relative"
+              >
+                <div className="bg-gradient-to-br from-brand-light-blue/10 to-blue-100/20 border border-brand-light-blue/20 rounded-2xl p-8">
+                  <div className="text-center">
+                    <div className="text-6xl text-brand-light-blue mb-6">"</div>
+                    <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+                      Mit den KI-Workflows von Martic Solutions sparen wir Zeit beim Social Media, erhalten mehr qualifizierte Kundenanfragen und steigern unseren Umsatz.
+                    </p>
+                    <div className="border-t border-gray-200 pt-6">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2">Thomas Szalai</h4>
+                      <a 
+                        href="https://www.linkedin.com/in/thomas-szalai-1372b8352/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-brand-light-blue font-semibold hover:text-brand-blue transition-colors duration-300"
+                      >
+                        Immobilienmakler
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>

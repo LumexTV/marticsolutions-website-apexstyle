@@ -24,10 +24,7 @@ const securityFeatures = [
 ];
 
 const certifications = [
-  'DSGVO-konform',
-  'ISO 27001',
-  'BSI-Grundschutz',
-  'TÜV-zertifiziert'
+  'DSGVO-konform'
 ];
 
 const Security = () => {

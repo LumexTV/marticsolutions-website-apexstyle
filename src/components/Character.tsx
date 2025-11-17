@@ -13,11 +13,11 @@ const Character: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Du bist der <span className="text-cyan-400">Held</span> deiner Geschichte
+            Sie sind der <span className="text-cyan-400">Held</span> Ihrer Geschichte
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Du hast eine Mission: Dein Unternehmen zu automatisieren und zu digitalisieren. 
-            Wir sind hier, um dir dabei zu helfen, diese Herausforderung zu meistern.
+            Sie haben eine Mission: Ihr Unternehmen zu automatisieren und zu digitalisieren. 
+            Wir sind hier, um Ihnen dabei zu helfen, diese Herausforderung zu meistern.
           </p>
         </motion.div>
 
@@ -32,9 +32,9 @@ const Character: React.FC = () => {
             <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mb-6 mx-auto">
               <Target className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Deine Vision</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Ihre Vision</h3>
             <p className="text-gray-300 leading-relaxed">
-              Du siehst ein Unternehmen, das effizient, modern und zukunftssicher ist. 
+              Sie sehen ein Unternehmen, das effizient, modern und zukunftssicher ist. 
               Ein Unternehmen, das durch Automatisierung Zeit spart und sich auf das Wesentliche konzentrieren kann.
             </p>
           </motion.div>
@@ -49,10 +49,10 @@ const Character: React.FC = () => {
             <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mb-6 mx-auto">
               <User className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Deine Herausforderung</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Ihre Herausforderung</h3>
             <p className="text-gray-300 leading-relaxed">
-              Du stehst vor der Aufgabe, komplexe Prozesse zu verstehen, die richtigen Lösungen zu finden 
-              und alles erfolgreich zu implementieren - ohne dabei den Überblick zu verlieren.
+              Sie stehen vor der Aufgabe, komplexe Prozesse zu verstehen, die richtigen Lösungen zu finden 
+              und alles erfolgreich zu implementieren – ohne dabei den Überblick zu verlieren.
             </p>
           </motion.div>
 
@@ -66,10 +66,10 @@ const Character: React.FC = () => {
             <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mb-6 mx-auto">
               <TrendingUp className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">Dein Ziel</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Ihr Ziel</h3>
             <p className="text-gray-300 leading-relaxed">
-              Du willst ein automatisiertes, digitales Unternehmen, das Zeit spart, 
-              Kosten reduziert und dir mehr Freiraum für strategische Entscheidungen gibt.
+              Sie wollen ein automatisiertes, digitales Unternehmen, das Zeit spart, 
+              Kosten reduziert und Ihnen mehr Freiraum für strategische Entscheidungen gibt.
             </p>
           </motion.div>
         </div>
@@ -81,7 +81,7 @@ const Character: React.FC = () => {
           className="text-center mt-12"
         >
           <p className="text-lg text-gray-300 mb-6">
-            Du bist bereit für den nächsten Schritt. Lass uns gemeinsam deine Vision verwirklichen.
+            Sie sind bereit für den nächsten Schritt. Lassen Sie uns gemeinsam Ihre Vision verwirklichen.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -89,7 +89,7 @@ const Character: React.FC = () => {
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-8 py-4 rounded-full text-lg font-bold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 shadow-2xl shadow-cyan-500/30"
           >
-            Jetzt deine Geschichte beginnen
+            Jetzt Ihre Geschichte beginnen
           </motion.button>
         </motion.div>
       </div>
