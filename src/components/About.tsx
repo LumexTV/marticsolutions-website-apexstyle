@@ -166,6 +166,7 @@ const About: React.FC = () => {
                     title="Kunden Testimonial 1"
                     className="w-full h-full"
                     frameBorder="0"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
@@ -241,6 +242,7 @@ const About: React.FC = () => {
                     title="Kunden Testimonial 2"
                     className="w-full h-full"
                     frameBorder="0"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
@@ -263,6 +265,7 @@ const About: React.FC = () => {
                     title="Kunden Testimonial 3"
                     className="w-full h-full"
                     frameBorder="0"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   ></iframe>
