@@ -26,7 +26,7 @@ const Plan: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-5 mb-16 max-w-2xl mx-auto place-items-center">
           {/* Block 1: Sales System */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -34,18 +34,18 @@ const Plan: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-left"
           >
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 h-full min-h-[220px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
-                  <TrendingUp className="text-brand-light-blue" size={28} />
+            <div className="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 h-full min-h-[200px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl w-full max-w-sm mx-auto">
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
+                  <TrendingUp className="text-brand-light-blue" size={20} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Vertriebsautomatisierung</h3>
-                  <p className="text-gray-700 mb-4">Transparente, skalierbare Vertriebsprozesse – weniger manuelle Arbeit, mehr Fokus auf Abschlüsse.</p>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Vertriebsautomatisierung</h3>
+                  <p className="text-gray-700 text-sm mb-4">Transparente, skalierbare Vertriebsprozesse – weniger manuelle Arbeit, mehr Fokus auf Abschlüsse.</p>
                   <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Qualifizierte Leads schneller weiterleiten</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Follow-ups und Terminierungen automatisieren</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Pipeline-Transparenz verbessern</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Qualifizierte Leads schneller weiterleiten</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Follow-ups und Terminierungen automatisieren</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Pipeline-Transparenz verbessern</li>
                   </ul>
                 </div>
               </div>
@@ -59,18 +59,18 @@ const Plan: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-left"
           >
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 h-full min-h-[220px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
-                  <PhoneCall className="text-brand-light-blue" size={28} />
+            <div className="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 h-full min-h-[200px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl w-full max-w-sm mx-auto">
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
+                  <PhoneCall className="text-brand-light-blue" size={20} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">KI‑Telefonassistenten</h3>
-                  <p className="text-gray-700 mb-4">Professionelle Gesprächsannahme rund um die Uhr – konsistent, hilfsbereit und markenkonform.</p>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">KI‑Telefonassistenten</h3>
+                  <p className="text-gray-700 text-sm mb-4">Professionelle Gesprächsannahme rund um die Uhr – konsistent, hilfsbereit und markenkonform.</p>
                   <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> 24/7 erreichbare Anrufannahme</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Qualifizierte Weiterleitung und Terminbuchung</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Einheitliche Gesprächsqualität</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> 24/7 erreichbare Anrufannahme</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Qualifizierte Weiterleitung und Terminbuchung</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Einheitliche Gesprächsqualität</li>
                   </ul>
                 </div>
               </div>
@@ -84,18 +84,18 @@ const Plan: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-left"
           >
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 h-full min-h-[220px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
-                  <Lightbulb className="text-brand-light-blue" size={28} />
+            <div className="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 h-full min-h-[200px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl w-full max-w-sm mx-auto">
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
+                  <Lightbulb className="text-brand-light-blue" size={20} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Digitalisierungsberatung</h3>
-                  <p className="text-gray-700 mb-4">Pragmatische Roadmaps statt Buzzwords – passgenau für Ihre Abläufe und Ziele.</p>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Digitalisierungsberatung</h3>
+                  <p className="text-gray-700 text-sm mb-4">Pragmatische Roadmaps statt Buzzwords – passgenau für Ihre Abläufe und Ziele.</p>
                   <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Prozesse aufnehmen und priorisieren</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Roadmap mit schnellen, messbaren Ergebnissen</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Toolauswahl und Implementierung begleiten</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Prozesse aufnehmen und priorisieren</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Roadmap mit schnellen, messbaren Ergebnissen</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Toolauswahl und Implementierung begleiten</li>
                   </ul>
                 </div>
               </div>
@@ -109,18 +109,18 @@ const Plan: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-left"
           >
-            <div className="bg-white border border-gray-200 rounded-2xl p-8 h-full min-h-[220px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
-                  <Zap className="text-brand-light-blue" size={28} />
+            <div className="bg-white border border-gray-200 rounded-2xl p-5 md:p-6 h-full min-h-[200px] transition-all duration-300 hover:border-brand-light-blue hover:shadow-xl w-full max-w-sm mx-auto">
+              <div className="flex items-start gap-3 md:gap-4">
+                <div className="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-brand-light-blue/10 flex items-center justify-center">
+                  <Zap className="text-brand-light-blue" size={20} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Prozessautomatisierung</h3>
-                  <p className="text-gray-700 mb-4">Wiederkehrende Aufgaben zuverlässig automatisieren – konsistente Qualität und weniger Fehlerquellen.</p>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Prozessautomatisierung</h3>
+                  <p className="text-gray-700 text-sm mb-4">Wiederkehrende Aufgaben zuverlässig automatisieren – konsistente Qualität und weniger Fehlerquellen.</p>
                   <ul className="space-y-2">
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Repetitive Aufgaben zuverlässig ausführen</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Fehler reduzieren und Qualität sichern</li>
-                    <li className="flex items-start gap-2 text-gray-700"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={18} /> Skalierbar und wartbar aufgebaut</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Repetitive Aufgaben zuverlässig ausführen</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Fehler reduzieren und Qualität sichern</li>
+                    <li className="flex items-start gap-2 text-gray-700 text-sm"><CheckCircle2 className="text-brand-light-blue mt-0.5" size={16} /> Skalierbar und wartbar aufgebaut</li>
                   </ul>
                 </div>
               </div>

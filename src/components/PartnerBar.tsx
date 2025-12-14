@@ -33,7 +33,7 @@ const PartnerBar: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex items-center justify-center gap-12 md:gap-16"
+          className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-10 md:gap-x-16"
         >
           {partners.map((partner, index) => {
             const isSponsored = /ref=|partnerlinks|refer\.|fpr=/.test(partner.link) || ['fonio','instantly','manychat','hetzner','apify'].includes(partner.name);
@@ -61,7 +61,7 @@ const PartnerBar: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.1 }}
-                className="flex items-center justify-center group w-24 md:w-28"
+                className="flex items-center justify-center group w-20 sm:w-24 md:w-28 shrink-0"
                 aria-label={ariaLabel}
                 title={title}
               >

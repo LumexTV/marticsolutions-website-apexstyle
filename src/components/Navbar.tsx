@@ -59,9 +59,14 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100
+        ${scrolled
+          ? 'md:bg-white/95 md:backdrop-blur-md md:shadow-lg md:border-b md:border-gray-100'
+          : 'md:bg-transparent md:backdrop-blur-0 md:shadow-none md:border-none'}
+      `}
+    >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -111,14 +116,14 @@ const Navbar: React.FC = () => {
                onClick={() => scrollToSection('contact')}
                className="bg-brand-light-blue text-white px-6 py-2 rounded-full font-semibold hover:bg-brand-blue transition-all duration-300 shadow-lg"
              >
-               Gratis Beratung
+               Kostenlose Beratung
              </motion.button>
           </div>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden p-2 text-brand-dark"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -170,7 +175,7 @@ const Navbar: React.FC = () => {
               onClick={() => scrollToSection('contact')}
               className="w-full bg-brand-light-blue text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-blue transition-all duration-300 shadow-lg"
             >
-              Gratis Beratung
+              Kostenlose Beratung
             </motion.button>
           </div>
         </motion.div>
