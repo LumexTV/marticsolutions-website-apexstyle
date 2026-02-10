@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, PhoneCall, Lightbulb, Zap, CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Plan: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <section id="plan" className="py-20 bg-white relative">
       {/* Helle Hintergrund-Effekte */}
@@ -21,7 +23,7 @@ const Plan: React.FC = () => {
             Unsere <span className="text-brand-light-blue">Lösungen</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Von der Prozessautomatisierung bis zur KI-Komplettlösung - 
+            Von der Prozessautomatisierung bis zur KI-Komplettlösung -
             wir bieten maßgeschneiderte Lösungen für Ihr Unternehmen.
           </p>
         </motion.div>
@@ -158,7 +160,7 @@ const Plan: React.FC = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => navigate('/erstgespraech')}
               className="mt-8 bg-brand-light-blue text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-brand-blue transition-all duration-300 shadow-xl"
             >
               Kostenlose Erstberatung

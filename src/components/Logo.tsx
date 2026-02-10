@@ -29,21 +29,21 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', showText = true, className = '
     <div className={`flex items-center space-x-3 ${className}`}>
       <div className={`${sizeClasses[size]} relative`}>
         {/* Logo ohne Hintergrund */}
-        <img 
-          src="/images/logo-no-bg.png" 
-          alt="Martic Solutions Logo" 
+        <img
+          src="/images/logo-no-bg.png"
+          alt="Martic Solutions Logo"
           className="w-full h-full object-contain"
           width={pixelSizes[size]}
           height={pixelSizes[size]}
           decoding="async"
           loading="eager"
-          fetchpriority="high"
+          fetchPriority="high"
         />
       </div>
       {showText && (
-        <div className={`font-bold ${textSizes[size]} leading-none`}>
-          <span className="text-black">MARTIC </span>
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">SOLUTIONS</span>
+        <div className={`font-medium text-lg tracking-[0.25em] leading-none`}>
+          <span className="text-slate-900">MARTIC </span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-apex-cyan to-apex-blue">SOLUTIONS</span>
         </div>
       )}
     </div>

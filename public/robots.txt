@@ -4,30 +4,46 @@ Allow: /
 # Sitemap
 Sitemap: https://marticsolutions.de/sitemap.xml
 
-# Crawl-delay für respektvolle Crawling-Geschwindigkeit
-Crawl-delay: 1
-
-# Spezifische Regeln für verschiedene Bots
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 1
-
 # Verhindere Crawling von privaten/administrativen Bereichen
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /webhook/
+Disallow: /danke
 
 # Erlaube wichtige Ressourcen
 Allow: /images/
 Allow: /css/
 Allow: /js/
 Allow: /fonts/
+
+# ===== GEO: AI-Crawler explizit erlauben =====
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft Copilot / Bing AI
+User-agent: Bingbot
+Allow: /
+
+# Standard Suchmaschinen
+User-agent: Googlebot
+Allow: /
+
+User-agent: Slurp
+Allow: /

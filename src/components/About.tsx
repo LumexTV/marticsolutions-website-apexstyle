@@ -15,14 +15,14 @@ const About: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
-            
+
 
             const animateCounter = (target: number, key: keyof typeof counters, duration: number = 2000) => {
               let current = 0;
               const steps = 60;
               const stepDuration = duration / steps;
               const increment = target / steps;
-              
+
               const timer = setInterval(() => {
                 current += increment;
                 if (current >= target) {
@@ -65,7 +65,7 @@ const About: React.FC = () => {
       id: 2,
       name: "Angelo Arena",
       company: "",
-      text: "Martic Solutions hat uns geholfen, unsere täglichen Aufgaben zu automatisieren. Wir profitieren täglich von den Automatisierungen."
+      text: "Martic Solutions hat uns geholfen, unsere lästigen Aufgaben zu automatisieren. Wir profitieren täglich von den Automatisierungen."
     },
     {
       id: 3,
@@ -183,19 +183,19 @@ const About: React.FC = () => {
                   <div className="text-center">
                     <div className="text-6xl text-brand-light-blue mb-6">"</div>
                     <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                    Mit Martic Solutions konnten wir nicht nur Zeit sparen, sondern auch unsere Kosten senken. Die Umsetzung war schnell und die Beratung individuell perfekt angepasst.
+                      Mit Martic Solutions konnten wir nicht nur Zeit sparen, sondern auch unsere Kosten senken. Die Umsetzung war schnell und die Beratung individuell perfekt angepasst.
                     </p>
-                      <div className="border-t border-gray-200 pt-6">
-                        <h4 className="text-xl font-bold text-gray-900 mb-2">Michael Vögele</h4>
-                        <a 
-                          href="https://webzeugx.agency/" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-brand-light-blue font-semibold hover:text-brand-blue transition-colors duration-300"
-                        >
-                          Webzeugx Webagentur
-                        </a>
-                      </div>
+                    <div className="border-t border-gray-200 pt-6">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2">Michael Vögele</h4>
+                      <a
+                        href="https://webzeugx.agency/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-brand-light-blue font-semibold hover:text-brand-blue transition-colors duration-300"
+                      >
+                        Webzeugx Webagentur
+                      </a>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -217,9 +217,9 @@ const About: React.FC = () => {
                     </p>
                     <div className="border-t border-gray-200 pt-6">
                       <h4 className="text-xl font-bold text-gray-900 mb-2">Lennard Meder</h4>
-                      <a 
-                        href="https://alpha-energieausweis.de/" 
-                        target="_blank" 
+                      <a
+                        href="https://alpha-energieausweis.de/"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-brand-light-blue font-semibold hover:text-brand-blue transition-colors duration-300"
                       >
@@ -287,9 +287,9 @@ const About: React.FC = () => {
                     </p>
                     <div className="border-t border-gray-200 pt-6">
                       <h4 className="text-xl font-bold text-gray-900 mb-2">Thomas Szalai</h4>
-                      <a 
-                        href="https://www.linkedin.com/in/thomas-szalai-1372b8352/" 
-                        target="_blank" 
+                      <a
+                        href="https://www.linkedin.com/in/thomas-szalai-1372b8352/"
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="text-brand-light-blue font-semibold hover:text-brand-blue transition-colors duration-300"
                       >

@@ -1,140 +1,91 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Linkedin, Youtube } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer: React.FC = () => {
   const location = useLocation();
-  
-  // Prüfen ob wir auf der Hauptseite sind
   const isHomePage = location.pathname === '/';
-  
+
   const scrollToSection = (sectionId: string) => {
     if (isHomePage) {
-      // Auf der Hauptseite: Smooth scroll zur Sektion
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // Auf Unterseiten: Zur Hauptseite mit Anker navigieren
       window.location.href = `/#${sectionId}`;
     }
   };
+
   return (
-    <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Logo and Company Info */}
-          <div className="md:col-span-2">
-            <Link to="/" className="mb-6 inline-block">
+    <footer className="bg-white/50 backdrop-blur-md border-t border-apex-border pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+
+          {/* Left: Navigation */}
+          <div>
+            <h4 className="font-bold text-apex-navy mb-4">Navigation</h4>
+            <ul className="space-y-3 text-apex-gray">
+              <li><button onClick={() => scrollToSection('hero')} className="hover:text-apex-blue transition-colors">Start</button></li>
+              <li><button onClick={() => scrollToSection('problem')} className="hover:text-apex-blue transition-colors">Problem</button></li>
+              <li><button onClick={() => scrollToSection('system')} className="hover:text-apex-blue transition-colors">Lösung</button></li>
+              <li><button onClick={() => scrollToSection('case-studies')} className="hover:text-apex-blue transition-colors">Fallstudien</button></li>
+              <li><button onClick={() => scrollToSection('faq')} className="hover:text-apex-blue transition-colors">FAQ</button></li>
+              <li><Link to="/erstgespraech" className="hover:text-apex-blue transition-colors">Potenzialanalyse</Link></li>
+            </ul>
+          </div>
+
+          {/* Center: Martic Solutions */}
+          <div className="text-center">
+            <Link to="/" className="inline-block mb-6">
               <Logo size="md" showText={true} />
             </Link>
-            <p className="text-gray-600 mb-4 max-w-md">
-              Wir automatisieren Ihre Prozesse mit modernster Technologie und geben Ihnen 
-              die Zeit zurück, die Sie für Wachstum brauchen.
+            <p className="text-apex-gray max-w-sm mx-auto leading-relaxed">
+              Wir transformieren B2B-Unternehmen durch intelligente Automatisierungssysteme.
+              Weniger manueller Aufwand, mehr strategisches Wachstum.
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Schnellzugriff</h3>
-            <ul className="space-y-2">
-              <li>
-                <button
-                  onClick={() => scrollToSection('problem')}
-                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
-                >
-                  Das Problem
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('plan')}
-                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
-                >
-                  Lösungen
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('about')}
-                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
-                >
-                  Über uns
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('faq')}
-                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
-                >
-                  FAQ
-                </button>
-              </li>
+          {/* Right: Rechtlich */}
+          <div className="md:text-right">
+            <h4 className="font-bold text-apex-navy mb-4">Rechtliches & Kontakt</h4>
+            <ul className="space-y-3 text-apex-gray">
+              <li><Link to="/impressum" className="hover:text-apex-blue transition-colors">Impressum</Link></li>
+              <li><Link to="/datenschutz" className="hover:text-apex-blue transition-colors">Datenschutz</Link></li>
+              <li><a href="mailto:kontakt@marticsolutions.de" className="hover:text-apex-blue transition-colors">Kontakt</a></li>
+              <li><a href="mailto:jobs@martic-solutions.com" className="hover:text-apex-blue transition-colors">Karriere</a></li>
             </ul>
-          </div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Rechtliches</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/impressum"
-                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
-                  onMouseEnter={() => import('../pages/Impressum')}
-                  onFocus={() => import('../pages/Impressum')}
-                >
-                  Impressum
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/datenschutz"
-                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
-                  onMouseEnter={() => import('../pages/PrivacyPolicy')}
-                  onFocus={() => import('../pages/PrivacyPolicy')}
-                >
-                  Datenschutz
-                </Link>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection('contact')}
-                  className="text-gray-600 hover:text-brand-light-blue transition-colors"
-                >
-                  Kontakt
-                </button>
-              </li>
-            </ul>
+            {/* Social Media Icons */}
+            <div className="flex items-center gap-4 mt-6 md:justify-end">
+              <a
+                href="https://www.linkedin.com/in/lukamrtc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-gray-400 hover:text-apex-navy hover:scale-110 transition-all duration-200"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@lukamrtc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-gray-400 hover:text-apex-navy hover:scale-110 transition-all duration-200"
+              >
+                <Youtube className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-8 pt-8 text-center">
-          <p className="text-gray-600">
-            © 2025 Martic Solutions. Alle Rechte vorbehalten.
+        <div className="border-t border-apex-border pt-8 text-center">
+          <p className="text-apex-gray text-sm">
+            &copy; {new Date().getFullYear()} Martic Solutions. Alle Rechte vorbehalten.
           </p>
         </div>
-        
-        {/* Iubenda Script für Datenschutzerklärung und Cookie-Richtlinie */}
-        <script type="text/javascript" dangerouslySetInnerHTML={{
-          __html: `
-            (function (w,d) {
-              var loader = function () {
-                var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; 
-                s.src="https://cdn.iubenda.com/iubenda.js"; 
-                tag.parentNode.insertBefore(s,tag);
-              }; 
-              if(w.addEventListener){
-                w.addEventListener("load", loader, false);
-              }else if(w.attachEvent){
-                w.attachEvent("onload", loader);
-              }else{
-                w.onload = loader;
-              }
-            })(window, document);
-          `
-        }} />
       </div>
     </footer>
   );

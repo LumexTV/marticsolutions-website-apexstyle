@@ -1,55 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Deaktiviere horizontales Scrollen */
-html, body {
+html,
+body {
   overflow-x: hidden;
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-/* Neues Farbschema: Weißer Hintergrund, schwarze Schrift, helleblaue Akzente */
 body {
-  background-color: white;
-  color: black;
+  @apply bg-apex-bg text-apex-navy font-sans antialiased;
 }
 
-/* Shimmer Animation für Akzent-Effekte */
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-/* Pausiere Animation beim Hover */
-.group:hover {
-  animation-play-state: paused !important;
-}
-
-/* Custom Utilities für neues Design */
+/* Custom Utilities for Apex Light Style */
 @layer utilities {
-  .text-brand {
-    @apply text-black;
-  }
-  
-  .bg-brand {
-    @apply bg-white;
-  }
-  
-  .accent-brand {
-    @apply text-brand-light-blue;
-  }
-  
-  .bg-accent {
-    @apply bg-brand-light-blue;
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-apex-blue-gradient;
   }
 
-  /* (Entfernt) Spezielle Text-Glow/Inset-Effekte – nicht verwendet */
+  .btn-primary {
+    @apply bg-apex-navy text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-apex-navy border border-apex-border px-8 py-3 rounded-full font-semibold hover:bg-apex-bg-soft transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+
+  .card-base {
+    @apply bg-white rounded-2xl border border-apex-border shadow-apex-card p-6 transition-all duration-300 hover:shadow-lg;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

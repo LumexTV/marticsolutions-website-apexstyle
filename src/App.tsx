@@ -1,48 +1,49 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './styles/chat-widget.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import LoadingScreen from './components/LoadingScreen';
 
-const PartnerBar = React.lazy(() => import('./components/PartnerBar'));
-const Problem = React.lazy(() => import('./components/Problem'));
-const Plan = React.lazy(() => import('./components/Plan'));
-const About = React.lazy(() => import('./components/About'));
-const Contact = React.lazy(() => import('./components/Contact'));
-const FAQ = React.lazy(() => import('./components/FAQ'));
-const Footer = React.lazy(() => import('./components/Footer'));
-const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
-const Impressum = React.lazy(() => import('./pages/Impressum'));
-
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'));
+const Consultation = lazy(() => import('./pages/Consultation'));
+const ThankYou = lazy(() => import('./pages/ThankYou'));
+const Impressum = lazy(() => import('./pages/Impressum'));
+const Datenschutz = lazy(() => import('./pages/Datenschutz'));
 
 function App() {
+  const { scrollYProgress } = useScroll();
+
+  // Parallax effects for blobs (Global background stays here to persist across routes)
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, -400]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, 200]);
+
   return (
-    <Router>
-      <div className="bg-white min-h-screen overflow-x-hidden">
-        <Navbar />
-        <Suspense fallback={<div className="px-6 py-12" aria-busy="true"></div>}>
-          <main id="main-content" role="main">
+    <HelmetProvider>
+      <div className="min-h-screen font-sans text-apex-navy selection:bg-apex-blue selection:text-white relative overflow-hidden">
+        {/* Global Background Gradient Mesh with Parallax */}
+        <div className="fixed inset-0 z-0 pointer-events-none">
+          <motion.div style={{ y: y1 }} className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] rounded-full bg-apex-blue/20 blur-[120px]" />
+          <motion.div style={{ y: y2 }} className="absolute top-[20%] right-[10%] w-[600px] h-[600px] rounded-full bg-apex-cyan/20 blur-[100px]" />
+          <motion.div style={{ y: y3 }} className="absolute bottom-[10%] -left-[10%] w-[600px] h-[600px] rounded-full bg-apex-blue/20 blur-[120px]" />
+        </div>
+
+        <div className="relative z-10">
+          <Suspense fallback={<LoadingScreen />}>
             <Routes>
-              <Route path="/" element={
-                <>
-                  {/* Ansprechende Website-Struktur */}
-                  <Hero />           {/* 1. Hero (Oneliner, CTA, Bild) */}
-                  <PartnerBar />     {/* 1.5. Partner Leiste */}
-                  <Problem />        {/* 2. Das Problem */}
-                  <Plan />           {/* 3. Die Lösungen */}
-                  <About />          {/* 4. Über uns/Warum wir */}
-                  <Contact />        {/* 5. Footer/Kontakt */}
-                  <FAQ />            {/* 6. FAQ */}
-                </>
-              } />
-              <Route path="/datenschutz" element={<PrivacyPolicy />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/fallstudien/:id" element={<CaseStudyDetail />} />
+              <Route path="/erstgespraech" element={<Consultation />} />
+              <Route path="/danke" element={<ThankYou />} />
               <Route path="/impressum" element={<Impressum />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
             </Routes>
-          </main>
-          <Footer />
-        </Suspense>
+          </Suspense>
+        </div>
       </div>
-    </Router>
+    </HelmetProvider>
   );
 }
 

@@ -1,98 +1,103 @@
 <!doctype html>
 <html lang="de">
-  <head>
-    <!-- Entfernt: Externe Google Fonts, um keine Drittland-Requests auszulösen -->
-    
-    <!-- Cookiebot nur in Produktion laden -->
-    <script>
-      (function() {
-        var host = window.location.hostname;
-        var isProd = host === 'marticsolutions.de' || host === 'www.marticsolutions.de';
-        if (isProd) {
-          var s = document.createElement('script');
-          s.id = 'Cookiebot';
-          s.src = 'https://consent.cookiebot.com/uc.js';
-          s.type = 'text/javascript';
-          s.setAttribute('data-cbid', '5672dad7-bf17-49bd-b39f-9946569f7734');
-          s.setAttribute('data-blockingmode', 'auto');
-          s.setAttribute('data-culture', 'DE');
-          document.head.appendChild(s);
-        }
-      })();
-    </script>
-    
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Martic Solutions - KI-Automatisierung für Unternehmen | Kostenlose Erstberatung</title>
+<head>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-    <!-- ✅ Meta Description -->
-    <meta name="description" content="KI-Automatisierung für Unternehmen: Sparen Sie Zeit mit n8n-Workflows & intelligenten Prozessen. Kostenlose Erstberatung ✓ Individuelle Lösungen ✓ Sofort starten" />
-    <meta property="og:image" content="https://marticsolutions.de/images/logoicon.png" />
+  <!-- Cookiebot nur in Produktion laden -->
+  <script>
+    (function () {
+      var host = window.location.hostname;
+      var isProd = host === 'marticsolutions.de' || host === 'www.marticsolutions.de';
+      if (isProd) {
+        var s = document.createElement('script');
+        s.id = 'Cookiebot';
+        s.src = 'https://consent.cookiebot.com/uc.js';
+        s.type = 'text/javascript';
+        s.setAttribute('data-cbid', '5672dad7-bf17-49bd-b39f-9946569f7734');
+        s.setAttribute('data-blockingmode', 'auto');
+        s.setAttribute('data-culture', 'DE');
+        document.head.appendChild(s);
+      }
+    })();
+  </script>
 
-    <!-- ✅ Favicon (optimiert für Google Search) -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-    <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-chrome-192x192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png" />
-    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ✅ OpenGraph für Social Media -->
-    <meta property="og:title" content="Martic Solutions - KI-Automatisierung für Unternehmen | Kostenlose Beratung" />
-    <meta property="og:description" content="KI-Automatisierung für Unternehmen: Sparen Sie Zeit mit n8n-Workflows & intelligenten Prozessen. Kostenlose Erstberatung ✓" />
-    <meta property="og:image" content="https://marticsolutions.de/images/logoicon.png" />
-    <meta property="og:url" content="https://marticsolutions.de" />
-    <meta property="og:type" content="website" />
+  <title>Martic Solutions - KI-Automatisierung für Unternehmen | Kostenlose Erstberatung</title>
 
-    <!-- ✅ Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Martic Solutions - KI-Automatisierung für Unternehmen" />
-    <meta name="twitter:description" content="KI-Automatisierung für Unternehmen: Sparen Sie Zeit mit n8n-Workflows & intelligenten Prozessen. Kostenlose Erstberatung ✓" />
-    <meta name="twitter:image" content="https://marticsolutions.de/images/logoicon.png" />
+  <!-- ✅ Meta Description -->
+  <meta name="description"
+    content="KI-Automatisierung für Unternehmen: Sparen Sie Zeit mit n8n-Workflows & intelligenten Prozessen. Kostenlose Erstberatung ✓ Individuelle Lösungen ✓ Sofort starten" />
+  <meta property="og:image" content="https://marticsolutions.de/images/logoicon.png" />
 
-    <!-- ✅ Canonical Link -->
-    <link rel="canonical" href="https://marticsolutions.de" />
+  <!-- ✅ Favicon (optimiert für Google Search) -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon/android-chrome-512x512.png" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
 
-    <!-- ✅ Preload wichtiges LCP-Bild (Logo) -->
-    <link rel="preload" as="image" href="/images/logo-no-bg.png" fetchpriority="high" />
+  <!-- ✅ OpenGraph für Social Media -->
+  <meta property="og:title" content="Martic Solutions - KI-Automatisierung für Unternehmen | Kostenlose Beratung" />
+  <meta property="og:description"
+    content="KI-Automatisierung für Unternehmen: Sparen Sie Zeit mit n8n-Workflows & intelligenten Prozessen. Kostenlose Erstberatung ✓" />
+  <meta property="og:image" content="https://marticsolutions.de/images/logoicon.png" />
+  <meta property="og:url" content="https://marticsolutions.de" />
+  <meta property="og:type" content="website" />
 
-    <!-- ✅ Preconnect für YouTube Embeds -->
-    <link rel="preconnect" href="https://www.youtube.com" />
-    <link rel="preconnect" href="https://www.google.com" />
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Martic Solutions - KI-Automatisierung für Unternehmen" />
+  <meta name="twitter:description"
+    content="KI-Automatisierung für Unternehmen: Sparen Sie Zeit mit n8n-Workflows & intelligenten Prozessen. Kostenlose Erstberatung ✓" />
+  <meta name="twitter:image" content="https://marticsolutions.de/images/logoicon.png" />
 
-    <!-- ✅ Robots -->
-    <meta name="robots" content="index, follow" />
-    
-    <!-- ✅ Additional SEO Meta Tags -->
-    <meta name="keywords" content="KI-Automatisierung, Unternehmen, Prozessautomatisierung, Digitalisierung, n8n Workflows, Künstliche Intelligenz, Martic Solutions, Zeitersparnis, Workflow-Automatisierung, Business Automation, KI-Lösungen, Automatisierung Software, Deutschland, kostenlose Beratung, kostenlose Erstberatung, Automatisierung Beratung" />
-    <meta name="author" content="Martic Solutions" />
-    <meta name="language" content="de" />
-    <meta name="geo.region" content="DE" />
-    <meta name="geo.placename" content="Deutschland" />
-    <meta name="geo.position" content="51.1657;10.4515" />
-    <meta name="ICBM" content="51.1657, 10.4515" />
-    
-    <!-- ✅ Google Search Console Verification -->
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
-    
-    <!-- ✅ Bing Webmaster Tools -->
-    <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
-    
-    <!-- ✅ Performance & SEO -->
-    <meta name="theme-color" content="#000000" />
-    <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Martic Solutions" />
-    
-    <!-- ✅ Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
+  <!-- ✅ Canonical Link -->
+  <link rel="canonical" href="https://marticsolutions.de" />
+
+  <!-- ✅ Preload wichtiges LCP-Bild (Logo) -->
+  <link rel="preload" as="image" href="/images/logo-no-bg.png" fetchpriority="high" />
+
+  <!-- ✅ Preconnect für YouTube Embeds -->
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://www.google.com" />
+
+  <!-- ✅ Robots -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✅ Additional SEO Meta Tags -->
+  <meta name="keywords"
+    content="KI-Automatisierung, Unternehmen, Prozessautomatisierung, Digitalisierung, n8n Workflows, Künstliche Intelligenz, Martic Solutions, Zeitersparnis, Workflow-Automatisierung, Business Automation, KI-Lösungen, Automatisierung Software, Deutschland, kostenlose Beratung, kostenlose Erstberatung, Automatisierung Beratung" />
+  <meta name="author" content="Martic Solutions" />
+  <meta name="language" content="de" />
+  <meta name="geo.region" content="DE" />
+  <meta name="geo.placename" content="Deutschland" />
+  <meta name="geo.position" content="51.1657;10.4515" />
+  <meta name="ICBM" content="51.1657, 10.4515" />
+
+
+
+  <!-- ✅ Performance & SEO -->
+  <meta name="theme-color" content="#000000" />
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="Martic Solutions" />
+
+  <!-- ✅ Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -170,9 +175,9 @@
       }
     }
     </script>
-    
-    <!-- ✅ Local Business Schema -->
-    <script type="application/ld+json">
+
+  <!-- ✅ Local Business Schema -->
+  <script type="application/ld+json">
          {
        "@context": "https://schema.org",
        "@type": "LocalBusiness",
@@ -197,153 +202,177 @@
       "areaServed": "DE"
     }
     </script>
-    
-    <!-- Base styles aligned to light theme -->
-    <style>
-      /* Base Styles */
-      * {
-        box-sizing: border-box;
-      }
-      
-      html, body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: #f8fafc; /* Tailwind gray-50 */
-        color: #111827; /* Tailwind gray-900 */
-      }
-      
-      #root {
-        min-height: 100vh;
-        width: 100%;
-      }
-    </style>
 
-    <!-- n8n Chat CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    
-    <!-- Consent Mode & GA nur in Produktion laden -->
-    <script>
-      (function() {
-        var host = window.location.hostname;
-        var isProd = host === 'marticsolutions.de' || host === 'www.marticsolutions.de';
-        if (!isProd) return;
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){ dataLayer.push(arguments); }
-
-        // Consent Mode default
-        gtag('consent', 'default', {
-          ad_personalization: 'denied',
-          ad_storage: 'denied',
-          ad_user_data: 'denied',
-          analytics_storage: 'denied',
-          functionality_storage: 'denied',
-          personalization_storage: 'denied',
-          security_storage: 'granted',
-          wait_for_update: 500,
-        });
-        gtag('set', 'ads_data_redaction', true);
-        gtag('set', 'url_passthrough', false);
-
-        // GA laden
-        var ga = document.createElement('script');
-        ga.async = true;
-        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-6V31WG08CF';
-        document.head.appendChild(ga);
-
-        // GA Konfiguration
-        gtag('js', new Date());
-        gtag('config', 'G-6V31WG08CF', {
-          page_title: 'Martic Solutions - KI-Automatisierung für Unternehmen',
-          page_location: 'https://marticsolutions.de',
-          custom_map: {
-            'custom_parameter_1': 'business_type',
-            'custom_parameter_2': 'service_interest'
+  <!-- ✅ FAQPage Schema (Rich Snippets) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Wie schnell sind erste Ergebnisse sichtbar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Geschwindigkeit ist unser Markenzeichen. Während klassische Agenturen oft Monate für Konzepte brauchen, gehen unsere Systeme meist innerhalb von 14 bis 21 Tagen live. Sie sehen also oft noch im selben Monat die ersten messbaren Resultate."
           }
-        });
-      })();
-    </script>
-    
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich meine vorhandenen Tools weiter nutzen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In 95 % der Fälle: Ja. Wir bauen keine neuen Insel-Lösungen, sondern verbinden Ihre bestehende Software (CRM, E-Mail, ERP) intelligent miteinander. Wir ersetzen Ihre Tools nur dann, wenn es einen massiven strategischen Vorteil bringt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Prozesse automatisieren Sie konkret?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir fokussieren uns auf repetitive Zeitfresser: Lead-Recherche & Qualifizierung, CRM-Pflege, Kunden-Onboarding, Rechnungsstellung und First-Level-Support. Kurz gesagt: Alles, was manuell Zeit kostet, aber keine strategische Entscheidung erfordert."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Lohnt sich das Investment für mich wirklich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "KI-Automatisierung ist kein Kostenfaktor, sondern ein Rendite-Hebel. Unsere Kunden berichten in der Regel von einer Amortisation (ROI) innerhalb von 3 bis 6 Monaten – durch gesparte Arbeitszeit und gleichzeitig steigende Abschlussquoten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Brauche ich technisches Know-how?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Wir liefern schlüsselfertige Infrastruktur. Wir übernehmen Einrichtung, Hosting und Wartung. Ihr Team muss lediglich wissen, wie man die gewonnenen Leads oder Ergebnisse nutzt – und dafür erhalten Sie eine klare Einweisung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie sicher sind meine Unternehmensdaten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sicherheit ist nicht verhandelbar. Wir arbeiten streng DSGVO-konform, nutzen Verschlüsselung auf Enterprise-Niveau und setzen auf isolierte Server-Umgebungen. Ihre Daten trainieren keine öffentlichen KI-Modelle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Arbeiten Sie auch mit unserer internen IT zusammen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolut. Wir sehen uns als Spezial-Einheit, die Ihre interne IT entlastet. Wir übernehmen die komplexe Automatisierungs-Architektur, damit sich Ihr Tech-Team wieder auf Kernaufgaben und Strategie konzentrieren kann."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was passiert nach der Implementierung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir lassen Sie nicht allein. Auch nach dem Go-Live überwachen wir die Systeme, führen Updates durch und optimieren die Performance. Wir verstehen uns als langfristiger Partner für Ihre Skalierung."
+          }
+        }
+      ]
+    }
+  </script>
 
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    
-    <!-- GA wird oben konditional geladen -->
-
-    <!-- n8n Chat Script (lazy-load bei Interaktion oder Idle) -->
-    <script type="module">
-      let chatInitialized = false;
-
-      const initChat = async () => {
-        if (chatInitialized) return;
-        chatInitialized = true;
-
-        const { createChat } = await import('https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js');
-        createChat({
-          webhookUrl: 'https://n8n.marticsolutions.de/webhook/d552c7ae-632d-4308-823f-04b26ae22544/chat',
-          webhookConfig: {
-            method: 'POST',
-            headers: {}
-          },
-          target: '#n8n-chat',
-          mode: 'window',
-          chatInputKey: 'chatInput',
-          chatSessionKey: 'sessionId',
-          loadPreviousSession: true,
-          metadata: {
-            website: 'marticsolutions.de',
-            source: 'landingpage'
-          },
-          showWelcomeScreen: true,
-          defaultLanguage: 'de',
-          initialMessages: [
-            'Hallo! 👋',
-            'Ich stehe dir für alle Fragen zur Seite. Wie kann ich dir heute helfen?'
-          ],
-          i18n: {
-            de: {
-              title: 'Martic Solutions Chat Support',
-              subtitle: 'Stelle gerne alle deine Fragen. Ich helfe dir gerne weiter!',
-              footer: '',
-              getStarted: 'Neue Unterhaltung',
-              inputPlaceholder: 'Wie kann ich dir helfen?',
-            },
-            en: {
-              title: 'Martic Solutions Chat 💬',
-              subtitle: 'Ask us about automation. We\'re here to help!',
-              footer: '',
-              getStarted: 'New Conversation',
-              inputPlaceholder: 'How can I help you?',
-            }
-          },
-          enableStreaming: false,
-          allowFileUploads: false
-        });
-      };
-
-      const lazyTrigger = () => initChat();
-      window.addEventListener('pointerdown', lazyTrigger, { once: true });
-      window.addEventListener('keydown', lazyTrigger, { once: true });
-      window.addEventListener('touchstart', lazyTrigger, { once: true });
-
-      if ('requestIdleCallback' in window) {
-        // Fallback: Nach Idle laden (Timeout, falls nie Interaktion erfolgt)
-        // @ts-ignore
-        requestIdleCallback(() => { if (!chatInitialized) initChat(); }, { timeout: 5000 });
-      } else {
-        setTimeout(() => { if (!chatInitialized) initChat(); }, 5000);
+  <!-- ✅ WebSite Schema (Sitelinks Search Box) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Martic Solutions",
+      "url": "https://marticsolutions.de",
+      "description": "Professionelle KI-Automatisierung für Unternehmen. Wir digitalisieren Geschäftsprozesse mit intelligenten Workflows und KI-Mitarbeitern.",
+      "inLanguage": "de-DE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://marticsolutions.de/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
-    </script>
-    
-    <!-- Chat Widget Container -->
-    <div id="n8n-chat"></div>
-    
+    }
+  </script>
 
-    
+  <!-- Base styles aligned to light theme -->
+  <style>
+    /* Base Styles */
+    * {
+      box-sizing: border-box;
+    }
 
-  </body>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      /* Tailwind gray-50 */
+      color: #111827;
+      /* Tailwind gray-900 */
+    }
+
+    #root {
+      min-height: 100vh;
+      width: 100%;
+    }
+  </style>
+
+  <!-- n8n Chat CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+  <!-- Consent Mode & GA nur in Produktion laden -->
+  <script>
+    (function () {
+      var host = window.location.hostname;
+      var isProd = host === 'marticsolutions.de' || host === 'www.marticsolutions.de';
+      if (!isProd) return;
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+
+      // Consent Mode default
+      gtag('consent', 'default', {
+        ad_personalization: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'denied',
+        personalization_storage: 'denied',
+        security_storage: 'granted',
+        wait_for_update: 500,
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', false);
+
+      // GA laden
+      var ga = document.createElement('script');
+      ga.async = true;
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-6V31WG08CF';
+      document.head.appendChild(ga);
+
+      // GA Konfiguration
+      gtag('js', new Date());
+      gtag('config', 'G-6V31WG08CF', {
+        page_title: 'Martic Solutions - KI-Automatisierung für Unternehmen',
+        page_location: 'https://marticsolutions.de',
+        custom_map: {
+          'custom_parameter_1': 'business_type',
+          'custom_parameter_2': 'service_interest'
+        }
+      });
+    })();
+  </script>
+
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+
+</body>
+
 </html>

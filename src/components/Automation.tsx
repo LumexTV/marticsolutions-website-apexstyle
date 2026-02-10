@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart3, FileText, Calendar, Workflow } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const automationFeatures = [
   {
@@ -30,6 +31,7 @@ const automationFeatures = [
 ];
 
 const Automation = () => {
+  const navigate = useNavigate();
   return (
     <section id="automatisierung" className="py-20 bg-gradient-to-br from-black via-slate-900 to-black relative overflow-hidden">
       {/* Background Effects */}
@@ -49,7 +51,7 @@ const Automation = () => {
             <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Ihre Zeitersparnis</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-            Entdecken Sie, wie KI-Automatisierung Ihr Unternehmen 
+            Entdecken Sie, wie KI-Automatisierung Ihr Unternehmen
             effizienter und profitabler macht.
           </p>
         </motion.div>
@@ -68,7 +70,7 @@ const Automation = () => {
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
                   <feature.icon className="text-white" size={28} />
                 </div>
-                
+
                 <div className="flex-1">
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 break-words">
                     {feature.title}
@@ -93,16 +95,13 @@ const Automation = () => {
               Mehr Zeit für echte Arbeit
             </h3>
             <p className="text-gray-300 text-base sm:text-lg mb-6">
-              Während die KI Ihre Büroarbeit erledigt, konzentrieren Sie sich 
+              Während die KI Ihre Büroarbeit erledigt, konzentrieren Sie sich
               auf das, was Sie am besten können – Ihr Kerngeschäft.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const element = document.getElementById('contact');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => navigate('/erstgespraech')}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-black px-6 sm:px-8 py-3 rounded-full font-bold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm sm:text-base shadow-lg"
             >
               Kostenlose Erstberatung
