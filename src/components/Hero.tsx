@@ -1,7 +1,7 @@
 
 import React, { useRef, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, ArrowDown } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ArrowDown, TrendingUp } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
@@ -58,15 +58,14 @@ const Hero = () => {
               </div>
 
               <h1 className="text-5xl lg:text-7xl font-bold font-playfair text-apex-navy leading-tight mb-8">
-                Automatisieren, <br />
-                Optimieren & <span className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-[#102a63] drop-shadow-sm pb-1">
-                  Skalieren mit KI
+                Erhöhen sie, <br />
+                endlich wieder  <span className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-[#102a63] drop-shadow-sm pb-1">
+                  ihre Margen.
                 </span>
               </h1>
 
               <p className="text-xl md:text-2xl text-apex-navy max-w-3xl leading-relaxed">
-                Eliminieren Sie <strong className="font-semibold">manuelle Arbeit</strong> und senken Sie Ihre <strong className="font-semibold">Betriebskosten</strong> durch intelligente KI-Systeme. <strong className="font-semibold">Steigern Sie Umsatz und Marge signifikant</strong> – ganz <strong className="font-semibold">ohne neues Personal</strong> oder zusätzlichen Arbeitsaufwand.
-              </p>
+                Während Ihre Konkurrenz auf die <strong className="font-semibold">Mitarbeiter wartet</strong>, automatisieren Sie. <strong className="font-semibold">Mehr Projekte, höhere Margen, schnellere Umsetzung</strong> – KI gibt Ihnen den <strong className="font-semibold">Vorsprung</strong>, den andere nie aufholen.              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -100,227 +99,230 @@ const Hero = () => {
             </div>
           </motion.div>
 
-          {/* Visual Content - Dashboard with Floating Overlay Cards */}
+          {/* Visual Content - 3D Flip Card Dashboard */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative lg:h-[600px] flex items-center justify-center"
+            className="relative lg:h-[600px] flex items-center justify-center [perspective:2000px]"
           >
             <div
               ref={dashboardRef}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
-              className="relative w-full max-w-xl"
+              className="relative w-full max-w-xl group [perspective:2000px]"
             >
 
               {/* Background ambient glow */}
               <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-72 h-72 bg-cyan-400/10 blur-[80px] rounded-full" />
 
-              {/* ===== DASHBOARD MOCKUP ===== */}
+              {/* ===== TILT CONTAINER ===== */}
               <div
-                className="relative transition-transform duration-300 ease-out"
+                className="relative transition-transform duration-100 ease-out"
                 style={{
-                  transform: `perspective(1200px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
+                  transform: `rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
                   transformStyle: 'preserve-3d',
                 }}
               >
-                <div className="bg-white/80 backdrop-blur-2xl border border-white/70 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(255,255,255,0.5)] overflow-hidden">
 
-                  {/* Dashboard Top Bar */}
-                  <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100/80">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-400/70" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
-                      <div className="w-3 h-3 rounded-full bg-emerald-400/70" />
+                {/* ===== FLIP WRAPPER ===== */}
+                <div className="relative w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] group-hover:shadow-2xl">
+
+                  {/* === FRONT FACE (Original Dashboard) === */}
+                  <div className="[backface-visibility:hidden] relative bg-white/80 backdrop-blur-2xl border border-white/70 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.08),0_0_0_1px_rgba(255,255,255,0.5)] overflow-hidden">
+                    {/* Dashboard Top Bar */}
+                    <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100/80">
+                      <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full bg-red-400/70" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
+                        <div className="w-3 h-3 rounded-full bg-emerald-400/70" />
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-24 h-5 bg-gray-100 rounded-md" />
+                        <div className="w-6 h-6 rounded-md bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+                          <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-24 h-5 bg-gray-100 rounded-md" />
-                      <div className="w-6 h-6 rounded-md bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
-                        <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
+
+                    <div className="flex">
+                      {/* Sidebar */}
+                      <div className="w-12 border-r border-gray-100/80 py-4 flex flex-col items-center gap-4">
+                        <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 opacity-90" />
+                        <div className="w-5 h-5 rounded bg-gray-200/60" />
+                        <div className="w-5 h-5 rounded bg-gray-200/60" />
+                        <div className="w-5 h-5 rounded bg-cyan-100 border border-cyan-200/50" />
+                        <div className="w-5 h-5 rounded bg-gray-200/60" />
+                      </div>
+
+                      {/* Main Content Area */}
+                      <div className="flex-1 p-4 space-y-3">
+
+                        {/* KPI Row */}
+                        <div className="grid grid-cols-3 gap-2.5">
+                          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg p-3 border border-cyan-100/50">
+                            <div className="text-[9px] text-gray-400 font-medium mb-1">Umsatz</div>
+                            <div className="text-base font-bold text-apex-navy">€247K</div>
+                            <div className="flex items-center gap-0.5 mt-0.5">
+                              <svg className="w-2.5 h-2.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" /></svg>
+                              <span className="text-[8px] font-semibold text-emerald-500">+40%</span>
+                            </div>
+                          </div>
+                          <div className="bg-white/60 rounded-lg p-3 border border-gray-100">
+                            <div className="text-[9px] text-gray-400 font-medium mb-1">Leads</div>
+                            <div className="text-base font-bold text-apex-navy">1,284</div>
+                            <div className="flex items-center gap-0.5 mt-0.5">
+                              <svg className="w-2.5 h-2.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" /></svg>
+                              <span className="text-[8px] font-semibold text-emerald-500">+28%</span>
+                            </div>
+                          </div>
+                          <div className="bg-white/60 rounded-lg p-3 border border-gray-100">
+                            <div className="text-[9px] text-gray-400 font-medium mb-1">Zeitersparnis</div>
+                            <div className="text-base font-bold text-apex-navy">22,5h</div>
+                            <div className="flex items-center gap-0.5 mt-0.5">
+                              <svg className="w-2.5 h-2.5 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" /></svg>
+                              <span className="text-[8px] font-semibold text-cyan-500">/Woche</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Chart Area */}
+                        <div className="bg-white/50 rounded-lg border border-gray-100 p-3">
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="text-[9px] font-semibold text-gray-500">Umsatzentwicklung</span>
+                            <div className="flex gap-1">
+                              <div className="px-1.5 py-0.5 rounded text-[7px] font-medium bg-cyan-100 text-cyan-600">6M</div>
+                              <div className="px-1.5 py-0.5 rounded text-[7px] font-medium bg-gray-100 text-gray-400">12M</div>
+                            </div>
+                          </div>
+                          {/* SVG Line Chart */}
+                          <svg className="w-full h-24" viewBox="0 0 300 80" fill="none">
+                            <defs>
+                              <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stopColor="rgba(6,182,212,0.15)" />
+                                <stop offset="100%" stopColor="rgba(6,182,212,0)" />
+                              </linearGradient>
+                            </defs>
+                            <line x1="0" y1="20" x2="300" y2="20" stroke="rgba(0,0,0,0.04)" strokeWidth="0.5" />
+                            <line x1="0" y1="40" x2="300" y2="40" stroke="rgba(0,0,0,0.04)" strokeWidth="0.5" />
+                            <line x1="0" y1="60" x2="300" y2="60" stroke="rgba(0,0,0,0.04)" strokeWidth="0.5" />
+                            <path d="M0 65 L30 58 L60 62 L90 50 L120 45 L150 38 L180 30 L210 25 L240 18 L270 15 L300 8 L300 80 L0 80 Z" fill="url(#chartFill)" />
+                            <path d="M0 65 L30 58 L60 62 L90 50 L120 45 L150 38 L180 30 L210 25 L240 18 L270 15 L300 8" stroke="url(#lineGrad)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                            <defs>
+                              <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stopColor="#06B6D4" />
+                                <stop offset="100%" stopColor="#3B82F6" />
+                              </linearGradient>
+                            </defs>
+                            <circle cx="300" cy="8" r="3" fill="#3B82F6" />
+                            <circle cx="300" cy="8" r="5" fill="none" stroke="#3B82F6" strokeWidth="1" opacity="0.3" />
+                          </svg>
+                        </div>
+
+                        {/* Bar Chart + Mini Table Row */}
+                        <div className="grid grid-cols-2 gap-2.5">
+                          <div className="bg-white/50 rounded-lg border border-gray-100 p-3">
+                            <span className="text-[9px] font-semibold text-gray-500 mb-2 block">Automations</span>
+                            <div className="flex items-end gap-1.5 h-14">
+                              {[35, 50, 45, 65, 55, 80, 70, 90, 85, 95].map((h, i) => (
+                                <div
+                                  key={i}
+                                  className="flex-1 rounded-sm"
+                                  style={{
+                                    background: i >= 7 ? 'linear-gradient(to top, #06B6D4, #3B82F6)' : 'rgba(6,182,212,0.2)',
+                                    height: `${h}%`,
+                                  }}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                          <div className="bg-white/50 rounded-lg border border-gray-100 p-3">
+                            <span className="text-[9px] font-semibold text-gray-500 mb-2 block">Status</span>
+                            <div className="space-y-1.5">
+                              {[
+                                { label: 'E-Mail Flow', status: true },
+                                { label: 'Lead Scoring', status: true },
+                                { label: 'CRM Sync', status: true },
+                                { label: 'Reporting', status: true },
+                              ].map((item, i) => (
+                                <div key={i} className="flex items-center justify-between">
+                                  <span className="text-[8px] text-gray-500">{item.label}</span>
+                                  <div className="flex items-center gap-1">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                    <span className="text-[7px] font-medium text-emerald-500">Live</span>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex">
-                    {/* Sidebar */}
-                    <div className="w-12 border-r border-gray-100/80 py-4 flex flex-col items-center gap-4">
-                      <div className="w-6 h-6 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 opacity-90" />
-                      <div className="w-5 h-5 rounded bg-gray-200/60" />
-                      <div className="w-5 h-5 rounded bg-gray-200/60" />
-                      <div className="w-5 h-5 rounded bg-cyan-100 border border-cyan-200/50" />
-                      <div className="w-5 h-5 rounded bg-gray-200/60" />
+                  {/* === BACK FACE (Premium Glass Design) === */}
+                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-slate-900/95 backdrop-blur-2xl rounded-2xl p-12 flex flex-col items-center justify-center text-center shadow-2xl border border-white/10 overflow-hidden">
+
+                    {/* Subtle Glass Reflection/Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+
+                    {/* Content */}
+                    <div className="relative z-10 flex flex-col items-center gap-8">
+                      <div className="space-y-4">
+                        <h3 className="text-3xl lg:text-5xl font-light font-playfair text-white leading-tight">
+                          Wer 2026 nicht <br />
+                          <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">automatisiert</span>,
+                        </h3>
+                        <h3 className="text-3xl lg:text-5xl font-light font-playfair text-white leading-tight">
+                          ist 2027 irrelevant.
+                        </h3>
+                      </div>
+
+                      <div className="w-16 h-[1px] bg-white/20 my-2" />
+
+                      <button onClick={() => navigate('/erstgespraech')} className="px-8 py-3 rounded-full bg-white text-apex-navy font-medium hover:bg-gray-100 transition-all duration-300 shadow-lg flex items-center gap-2 group/btn mt-4">
+                        Jetzt starten
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </button>
                     </div>
+                  </div>
 
-                    {/* Main Content Area */}
-                    <div className="flex-1 p-4 space-y-3">
+                </div>
+              </div>
 
-                      {/* KPI Row */}
-                      <div className="grid grid-cols-3 gap-2.5">
-                        <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg p-3 border border-cyan-100/50">
-                          <div className="text-[9px] text-gray-400 font-medium mb-1">Umsatz</div>
-                          <div className="text-base font-bold text-apex-navy">€247K</div>
-                          <div className="flex items-center gap-0.5 mt-0.5">
-                            <svg className="w-2.5 h-2.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" /></svg>
-                            <span className="text-[8px] font-semibold text-emerald-500">+40%</span>
-                          </div>
-                        </div>
-                        <div className="bg-white/60 rounded-lg p-3 border border-gray-100">
-                          <div className="text-[9px] text-gray-400 font-medium mb-1">Leads</div>
-                          <div className="text-base font-bold text-apex-navy">1,284</div>
-                          <div className="flex items-center gap-0.5 mt-0.5">
-                            <svg className="w-2.5 h-2.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" /></svg>
-                            <span className="text-[8px] font-semibold text-emerald-500">+28%</span>
-                          </div>
-                        </div>
-                        <div className="bg-white/60 rounded-lg p-3 border border-gray-100">
-                          <div className="text-[9px] text-gray-400 font-medium mb-1">Zeitersparnis</div>
-                          <div className="text-base font-bold text-apex-navy">42,5h</div>
-                          <div className="flex items-center gap-0.5 mt-0.5">
-                            <svg className="w-2.5 h-2.5 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 15l7-7 7 7" /></svg>
-                            <span className="text-[8px] font-semibold text-cyan-500">/Woche</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Chart Area */}
-                      <div className="bg-white/50 rounded-lg border border-gray-100 p-3">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-[9px] font-semibold text-gray-500">Umsatzentwicklung</span>
-                          <div className="flex gap-1">
-                            <div className="px-1.5 py-0.5 rounded text-[7px] font-medium bg-cyan-100 text-cyan-600">6M</div>
-                            <div className="px-1.5 py-0.5 rounded text-[7px] font-medium bg-gray-100 text-gray-400">12M</div>
-                          </div>
-                        </div>
-                        {/* SVG Line Chart */}
-                        <svg className="w-full h-24" viewBox="0 0 300 80" fill="none">
-                          <defs>
-                            <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                              <stop offset="0%" stopColor="rgba(6,182,212,0.15)" />
-                              <stop offset="100%" stopColor="rgba(6,182,212,0)" />
-                            </linearGradient>
-                          </defs>
-                          {/* Grid lines */}
-                          <line x1="0" y1="20" x2="300" y2="20" stroke="rgba(0,0,0,0.04)" strokeWidth="0.5" />
-                          <line x1="0" y1="40" x2="300" y2="40" stroke="rgba(0,0,0,0.04)" strokeWidth="0.5" />
-                          <line x1="0" y1="60" x2="300" y2="60" stroke="rgba(0,0,0,0.04)" strokeWidth="0.5" />
-                          {/* Fill area */}
-                          <path d="M0 65 L30 58 L60 62 L90 50 L120 45 L150 38 L180 30 L210 25 L240 18 L270 15 L300 8 L300 80 L0 80 Z" fill="url(#chartFill)" />
-                          {/* Line */}
-                          <path d="M0 65 L30 58 L60 62 L90 50 L120 45 L150 38 L180 30 L210 25 L240 18 L270 15 L300 8" stroke="url(#lineGrad)" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                          <defs>
-                            <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-                              <stop offset="0%" stopColor="#06B6D4" />
-                              <stop offset="100%" stopColor="#3B82F6" />
-                            </linearGradient>
-                          </defs>
-                          {/* End dot */}
-                          <circle cx="300" cy="8" r="3" fill="#3B82F6" />
-                          <circle cx="300" cy="8" r="5" fill="none" stroke="#3B82F6" strokeWidth="1" opacity="0.3" />
-                        </svg>
-                      </div>
-
-                      {/* Bar Chart + Mini Table Row */}
-                      <div className="grid grid-cols-2 gap-2.5">
-                        {/* Bar Chart */}
-                        <div className="bg-white/50 rounded-lg border border-gray-100 p-3">
-                          <span className="text-[9px] font-semibold text-gray-500 mb-2 block">Automations</span>
-                          <div className="flex items-end gap-1.5 h-14">
-                            {[35, 50, 45, 65, 55, 80, 70, 90, 85, 95].map((h, i) => (
-                              <motion.div
-                                key={i}
-                                className="flex-1 rounded-sm"
-                                style={{
-                                  background: i >= 7 ? 'linear-gradient(to top, #06B6D4, #3B82F6)' : 'rgba(6,182,212,0.2)',
-                                  height: `${h}%`,
-                                }}
-                                initial={{ height: 0 }}
-                                animate={{ height: `${h}%` }}
-                                transition={{ duration: 0.8, delay: 0.5 + i * 0.05 }}
-                              />
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Mini Table */}
-                        <div className="bg-white/50 rounded-lg border border-gray-100 p-3">
-                          <span className="text-[9px] font-semibold text-gray-500 mb-2 block">Status</span>
-                          <div className="space-y-1.5">
-                            {[
-                              { label: 'E-Mail Flow', status: true },
-                              { label: 'Lead Scoring', status: true },
-                              { label: 'CRM Sync', status: true },
-                              { label: 'Reporting', status: true },
-                            ].map((item, i) => (
-                              <div key={i} className="flex items-center justify-between">
-                                <span className="text-[8px] text-gray-500">{item.label}</span>
-                                <div className="flex items-center gap-1">
-                                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                                  <span className="text-[7px] font-medium text-emerald-500">Live</span>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+              {/* Floating Cards (Only visible on front, fading out on hover/flip?) 
+                  Actually, let's keep them but maybe move them with the tilt.
+                  Since we are preserving 3d, if we don't put them inside the flip wrapper, they will float above.
+                  Let's flip them away or hide them on group hover used css opacity.
+              */}
+              <div className="absolute -top-6 -right-6 z-30 transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 pointer-events-none">
+                <div className="bg-white/70 backdrop-blur-2xl border border-white/80 rounded-xl px-4 py-3 shadow-lg">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                      <TrendingUp className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="block text-lg font-bold text-apex-navy leading-tight">+40%</span>
+                      <span className="text-[10px] font-medium text-gray-500">Umsatz</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* ===== FLOATING OVERLAY CARD 1 - +40% Umsatz (Top Right) ===== */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-                className="absolute -top-6 -right-6 z-30 transition-transform duration-300 ease-out"
-                style={{ transform: `translate(${tilt.x * 1.5}px, ${tilt.y * 1.5}px)` }}
-              >
-                <motion.div
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <div className="bg-white/70 backdrop-blur-2xl border border-white/80 rounded-xl px-4 py-3 shadow-[0_8px_32px_rgba(6,182,212,0.15),0_0_0_1px_rgba(255,255,255,0.5)]">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-400 to-emerald-500 flex items-center justify-center shadow-md shadow-emerald-500/20">
-                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                      <div>
-                        <span className="block text-lg font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent leading-tight">+40%</span>
-                        <span className="text-[10px] font-medium text-gray-500">Mehr Umsatz</span>
-                      </div>
+              <div className="absolute -bottom-4 -left-4 z-30 transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 pointer-events-none">
+                <div className="bg-white/70 backdrop-blur-2xl border border-white/80 rounded-xl px-4 py-2.5 shadow-lg">
+                  <div className="flex items-center gap-2">
+                    <div className="relative flex h-2.5 w-2.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                     </div>
+                    <span className="text-sm font-semibold text-apex-navy">Vollautomatisiert</span>
                   </div>
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
 
-              {/* ===== FLOATING OVERLAY CARD 2 - Vollautomatisiert (Bottom Left) ===== */}
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.5 }}
-                className="absolute -bottom-4 -left-4 z-30 transition-transform duration-300 ease-out"
-                style={{ transform: `translate(${-tilt.x * 1.8}px, ${-tilt.y * 1.8}px)` }}
-              >
-                <motion.div
-                  animate={{ y: [0, 6, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                >
-                  <div className="bg-white/70 backdrop-blur-2xl border border-white/80 rounded-xl px-4 py-2.5 shadow-[0_8px_32px_rgba(59,130,246,0.12),0_0_0_1px_rgba(255,255,255,0.5)]">
-                    <div className="flex items-center gap-2">
-                      <div className="relative">
-                        <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.6)]" />
-                        <div className="absolute inset-0 w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping opacity-40" />
-                      </div>
-                      <span className="text-sm font-semibold text-apex-navy">Vollautomatisiert</span>
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
 
             </div>
           </motion.div>
