@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Home, CheckCircle2, Clock, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
-import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 
 const ThankYou = () => {
@@ -27,19 +26,6 @@ const ThankYou = () => {
 
     return (
         <div className="min-h-screen bg-apex-bg flex flex-col relative overflow-hidden font-sans">
-            <Helmet>
-                {/* Google tag (gtag.js) */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17952698959"></script>
-                <script>
-                    {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', 'AW-17952698959');
-                    `}
-                </script>
-            </Helmet>
             <SEO
                 title="Vielen Dank! - Martic Solutions"
                 description="Vielen Dank für Ihre Anfrage."
