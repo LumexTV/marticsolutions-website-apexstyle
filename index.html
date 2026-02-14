@@ -13,15 +13,7 @@
     })(window, document, 'script', 'dataLayer', 'GTM-NGK5MP9T');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17952698959"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'AW-17952698959');
-  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -343,48 +335,7 @@
   <!-- n8n Chat CSS -->
   <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
-  <!-- Consent Mode & GA nur in Produktion laden -->
-  <script>
-    (function () {
-      var host = window.location.hostname;
-      var isProd = host === 'marticsolutions.de' || host === 'www.marticsolutions.de';
-      if (!isProd) return;
 
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-
-      // Consent Mode default
-      gtag('consent', 'default', {
-        ad_personalization: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        analytics_storage: 'denied',
-        functionality_storage: 'denied',
-        personalization_storage: 'denied',
-        security_storage: 'granted',
-        wait_for_update: 500,
-      });
-      gtag('set', 'ads_data_redaction', true);
-      gtag('set', 'url_passthrough', false);
-
-      // GA laden
-      var ga = document.createElement('script');
-      ga.async = true;
-      ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-6V31WG08CF';
-      document.head.appendChild(ga);
-
-      // GA Konfiguration
-      gtag('js', new Date());
-      gtag('config', 'G-6V31WG08CF', {
-        page_title: 'Martic Solutions - KI-Automatisierung für Unternehmen',
-        page_location: 'https://marticsolutions.de',
-        custom_map: {
-          'custom_parameter_1': 'business_type',
-          'custom_parameter_2': 'service_interest'
-        }
-      });
-    })();
-  </script>
 
 
 </head>
