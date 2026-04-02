@@ -57,15 +57,15 @@ const Hero = () => {
                 Für innovative B2B-Unternehmen
               </div>
 
-              <h1 className="text-5xl lg:text-7xl font-bold font-playfair text-apex-navy leading-tight mb-8">
-                Erhöhen sie, <br />
-                endlich wieder  <span className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-[#102a63] drop-shadow-sm pb-1">
-                  ihre Margen.
-                </span>
+              <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold font-playfair text-apex-navy leading-[1.15] mb-8 tracking-tight [text-wrap:balance]">
+                Mehr Umsatz aus deinem Vertriebsteam, weil es nur noch mit <span className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-[#102a63] drop-shadow-sm pb-1">
+                  passenden Leads
+                </span> spricht.
               </h1>
 
               <p className="text-xl md:text-2xl text-apex-navy max-w-3xl leading-relaxed">
-                Während Ihre Konkurrenz auf die <strong className="font-semibold">Mitarbeiter wartet</strong>, automatisieren Sie. <strong className="font-semibold">Mehr Projekte, höhere Margen, schnellere Umsetzung</strong> – KI gibt Ihnen den <strong className="font-semibold">Vorsprung</strong>, den andere nie aufholen.              </p>
+                Wir bauen dir ein <strong className="font-semibold">eigenes Lead-System</strong>, das laufend passende B2B-Leads recherchiert, filtert, bewertet und direkt in deinem CRM so sortiert, dass dein Team nur noch mit den <strong className="font-semibold">besten Kontakten</strong> spricht.
+              </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -73,7 +73,7 @@ const Hero = () => {
                 onClick={() => navigate('/erstgespraech')}
                 className="bg-white/40 backdrop-blur-xl border border-white/60 text-apex-navy font-bold py-4 px-8 rounded-full shadow-lg shadow-apex-blue/10 hover:bg-white/60 hover:border-white/80 hover:shadow-xl hover:shadow-apex-blue/20 transition-all flex items-center justify-center gap-2 group"
               >
-                Kostenloses Strategiegespräch
+                Lead-System prüfen lassen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
@@ -87,9 +87,9 @@ const Hero = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4 border-t border-apex-border/50">
               {[
-                "25+ KI-Projekte",
-                "100% DSGVO konform",
-                "5.0 Kundenzufriedenheit"
+                "Gezielte Lead-Recherche",
+                "Filterung & Bewertung",
+                "Saubere CRM-Übergabe"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 text-sm text-apex-gray font-medium">
                   <CheckCircle2 className="w-4 h-4 text-apex-blue" />
