@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import PainPoints from '../components/PainPoints';
 import SolutionPath from '../components/SolutionPath';
 import CaseStudies from '../components/CaseStudies';
+import AboutMe from '../components/AboutMe';
 import CoreServices from '../components/CoreServices';
 import FAQ from '../components/FAQ';
 import CTA from '../components/CTA';
@@ -27,6 +28,9 @@ const Home = () => {
                 </section>
                 <section id="case-studies">
                     <CaseStudies />
+                </section>
+                <section id="about-me">
+                    <AboutMe />
                 </section>
                 <section id="services">
                     <CoreServices />

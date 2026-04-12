@@ -5,16 +5,16 @@ import { Cog, Users, Bot } from 'lucide-react';
 const CoreServices = () => {
     const services = [
         {
+            icon: Users,
+            title: "B2B Lead-Generierung",
+            description: "Wir entwickeln skalierbare Systeme, die passende Accounts identifizieren und qualifizieren. Verifizierte Daten, vorhersehbares Umsatzwachstum.",
+            position: "top-center"
+        },
+        {
             icon: Cog,
             title: "Prozess-Automatisierungen",
             description: "Wir eliminieren manuelle, wiederkehrende Aufgaben – damit Ihr Team sich auf wertschöpfende Arbeit konzentrieren kann. Weniger Chaos, mehr Fokus.",
             position: "top-left"
-        },
-        {
-            icon: Users,
-            title: "B2B Lead-Generierung",
-            description: "Wir entwickeln skalierbare Systeme, die passende Accounts identifizieren und qualifizieren. Verifizierte Daten, vorhersehbares Umsatzwachstum.",
-            position: "top-right"
         },
         {
             icon: Bot,
@@ -126,7 +126,7 @@ const CoreServices = () => {
                     {/* Service Cards Container - using grid for better positioning */}
                     <div className="absolute inset-0 grid grid-cols-3 gap-8 items-center">
 
-                        {/* Left - B2B Leads */}
+                        {/* Left - Prozess-Automatisierungen */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -136,14 +136,14 @@ const CoreServices = () => {
                         >
                             <div className="group text-left bg-gradient-to-br from-white/70 to-apex-cyan/5 backdrop-blur-2xl rounded-2xl p-6 border border-apex-cyan/30 shadow-xl shadow-apex-cyan/5 hover:shadow-2xl hover:shadow-apex-cyan/20 hover:border-apex-cyan/50 transition-all">
                                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-apex-blue to-apex-cyan flex items-center justify-center mb-4 shadow-lg shadow-apex-cyan/40 group-hover:scale-110 transition-transform">
-                                    <Users className="w-6 h-6 text-white" />
+                                    <Cog className="w-6 h-6 text-white" />
                                 </div>
                                 <h3 className="text-lg font-bold text-apex-navy mb-2">{services[1].title}</h3>
                                 <p className="text-apex-gray leading-relaxed text-sm">{services[1].description}</p>
                             </div>
                         </motion.div>
 
-                        {/* Center - Automatisierungen (positioned higher) */}
+                        {/* Center - B2B Lead-Generierung (positioned higher) */}
                         <div className="flex flex-col">
                             <motion.div
                                 initial={{ opacity: 0, y: -30 }}
@@ -154,7 +154,7 @@ const CoreServices = () => {
                             >
                                 <div className="group text-center bg-gradient-to-br from-white/70 to-apex-cyan/5 backdrop-blur-2xl rounded-2xl p-6 border border-apex-cyan/30 shadow-xl shadow-apex-cyan/5 hover:shadow-2xl hover:shadow-apex-cyan/20 hover:border-apex-cyan/50 transition-all">
                                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-apex-blue to-apex-cyan flex items-center justify-center mb-4 shadow-lg shadow-apex-cyan/40 mx-auto group-hover:scale-110 transition-transform">
-                                        <Cog className="w-6 h-6 text-white" />
+                                        <Users className="w-6 h-6 text-white" />
                                     </div>
                                     <h3 className="text-lg font-bold text-apex-navy mb-2">{services[0].title}</h3>
                                     <p className="text-apex-gray leading-relaxed text-sm">{services[0].description}</p>
