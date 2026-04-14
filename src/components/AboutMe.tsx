@@ -23,7 +23,7 @@ const AboutMe = () => {
 
                         <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/50 aspect-[4/5] lg:aspect-square">
                             <img
-                                src="/images/website_image.png"
+                                src="/images/website_image.webp"
                                 alt="Über mich"
                                 className="w-full h-full object-cover"
                             />
