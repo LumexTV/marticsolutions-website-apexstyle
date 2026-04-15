@@ -22,11 +22,7 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          animations: ['framer-motion'],
-          icons: ['lucide-react'],
-        },
+        // Let Vite's automatic chunking algorithm optimize imports directly
       },
     },
     // CSS Optimierung
