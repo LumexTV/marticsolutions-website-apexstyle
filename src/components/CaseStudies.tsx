@@ -113,14 +113,22 @@ const CaseStudies = () => {
     const navigate = useNavigate();
     // Load Wistia scripts once
     useEffect(() => {
-        const script1 = document.createElement("script");
-        script1.src = "https://fast.wistia.com/player.js";
-        script1.async = true;
-        document.body.appendChild(script1);
+        const timer = setTimeout(() => {
+            const script1 = document.createElement("script");
+            script1.src = "https://fast.wistia.com/player.js";
+            script1.async = true;
+            document.body.appendChild(script1);
+            
+            // Clean up function if component unmounts before script executes
+            return () => {
+                if (document.body.contains(script1)) {
+                    document.body.removeChild(script1);
+                }
+            };
+        }, 3500); // Wait 3.5s to not block FCP/LCP
 
-        // Preload generic if needed
         return () => {
-            document.body.removeChild(script1);
+            clearTimeout(timer);
         };
     }, []);
 
