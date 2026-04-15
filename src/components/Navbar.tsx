@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
-          <button onClick={() => scrollToSection('hero')}>
+          <button onClick={() => scrollToSection('hero')} aria-label="Zur Startseite">
             <Logo size="md" showText={true} />
           </button>
 
@@ -97,8 +97,10 @@ const Navbar: React.FC = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-apex-navy"
+            aria-label="Menü öffnen/schließen"
+            aria-expanded={isOpen}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
         </div>
       </div>

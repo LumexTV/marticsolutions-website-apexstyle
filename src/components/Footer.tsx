@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
 
           {/* Left: Navigation */}
           <div>
-            <h4 className="font-bold text-apex-navy mb-4">Navigation</h4>
+            <h2 className="font-bold text-apex-navy mb-4 text-base">Navigation</h2>
             <ul className="space-y-3 text-apex-gray">
               <li><button onClick={() => scrollToSection('hero')} className="hover:text-apex-blue transition-colors">Start</button></li>
               <li><button onClick={() => scrollToSection('problem')} className="hover:text-apex-blue transition-colors">Problem</button></li>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 
           {/* Right: Rechtlich */}
           <div className="md:text-right">
-            <h4 className="font-bold text-apex-navy mb-4">Rechtliches & Kontakt</h4>
+            <h2 className="font-bold text-apex-navy mb-4 text-base">Rechtliches & Kontakt</h2>
             <ul className="space-y-3 text-apex-gray">
               <li><Link to="/impressum" className="hover:text-apex-blue transition-colors">Impressum</Link></li>
               <li><Link to="/datenschutz" className="hover:text-apex-blue transition-colors">Datenschutz</Link></li>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-gray-400 hover:text-apex-navy hover:scale-110 transition-all duration-200"
+                className="text-apex-gray hover:text-apex-navy hover:scale-110 transition-all duration-200"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                className="text-gray-400 hover:text-apex-navy hover:scale-110 transition-all duration-200"
+                className="text-apex-gray hover:text-apex-navy hover:scale-110 transition-all duration-200"
               >
                 <Youtube className="w-5 h-5" />
               </a>

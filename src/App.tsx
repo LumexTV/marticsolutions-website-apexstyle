@@ -4,8 +4,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import LoadingScreen from './components/LoadingScreen';
 
-// Lazy load pages for better performance
-const Home = lazy(() => import('./pages/Home'));
+// Eager load Home for immediately rendering the Hero
+import Home from './pages/Home';
 const CaseStudyDetail = lazy(() => import('./pages/CaseStudyDetail'));
 const Consultation = lazy(() => import('./pages/Consultation'));
 const ThankYou = lazy(() => import('./pages/ThankYou'));

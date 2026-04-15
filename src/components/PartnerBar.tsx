@@ -23,9 +23,9 @@ const PartnerBar: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-8"
         >
-          <h3 className="text-lg font-semibold text-gray-900">
+          <h2 className="text-lg font-semibold text-gray-900">
             Unsere Partner
-          </h3>
+          </h2>
         </motion.div>
 
         <motion.div
