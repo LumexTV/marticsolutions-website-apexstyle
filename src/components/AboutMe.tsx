@@ -26,6 +26,8 @@ const AboutMe = () => {
                                 src="/images/website_image.webp"
                                 alt="Über mich"
                                 className="w-full h-full object-cover"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </div>
                     </motion.div>

@@ -2,15 +2,21 @@
 <html lang="de">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NGK5MP9T');</script>
+  <!-- Google Tag Manager (Deferred for Performance) -->
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+              new Date().getTime(), event: 'gtm.js'
+          }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+              'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NGK5MP9T');
+      }, 3000); // 3 seconds delay allows FCP and LCP to finish smoothly
+    });
+  </script>
   <!-- End Google Tag Manager -->
 
   <!-- Fonts -->
@@ -313,9 +319,6 @@
       width: 100%;
     }
   </style>
-
-  <!-- n8n Chat CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
 
 

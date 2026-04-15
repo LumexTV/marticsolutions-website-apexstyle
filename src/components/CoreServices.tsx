@@ -120,6 +120,8 @@ const CoreServices = () => {
                             src="/images/blacklogog_nobg.png"
                             alt="Martic Solutions Logo"
                             className="w-48 h-48 object-contain"
+                            loading="lazy"
+                            decoding="async"
                         />
                     </motion.div>
 

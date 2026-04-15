@@ -1,15 +1,17 @@
-
+import React, { Suspense, lazy } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import PainPoints from '../components/PainPoints';
-import SolutionPath from '../components/SolutionPath';
-import CaseStudies from '../components/CaseStudies';
-import AboutMe from '../components/AboutMe';
-import CoreServices from '../components/CoreServices';
-import FAQ from '../components/FAQ';
-import CTA from '../components/CTA';
-import Footer from '../components/Footer';
 import SEO from '../components/SEO';
+
+// Lazy loading below-the-fold components
+const PainPoints = lazy(() => import('../components/PainPoints'));
+const SolutionPath = lazy(() => import('../components/SolutionPath'));
+const CaseStudies = lazy(() => import('../components/CaseStudies'));
+const AboutMe = lazy(() => import('../components/AboutMe'));
+const CoreServices = lazy(() => import('../components/CoreServices'));
+const FAQ = lazy(() => import('../components/FAQ'));
+const CTA = lazy(() => import('../components/CTA'));
+const Footer = lazy(() => import('../components/Footer'));
 
 const Home = () => {
     return (
@@ -20,29 +22,34 @@ const Home = () => {
                 <section id="hero">
                     <Hero />
                 </section>
-                <section id="problem">
-                    <PainPoints />
-                </section>
-                <section id="system">
-                    <SolutionPath />
-                </section>
-                <section id="case-studies">
-                    <CaseStudies />
-                </section>
-                <section id="about-me">
-                    <AboutMe />
-                </section>
-                <section id="services">
-                    <CoreServices />
-                </section>
-                <section id="faq">
-                    <FAQ />
-                </section>
-                <section id="contact">
-                    <CTA />
-                </section>
+                
+                <Suspense fallback={<div className="h-40 flex items-center justify-center">Lade weitere Inhalte...</div>}>
+                    <section id="problem">
+                        <PainPoints />
+                    </section>
+                    <section id="system">
+                        <SolutionPath />
+                    </section>
+                    <section id="case-studies">
+                        <CaseStudies />
+                    </section>
+                    <section id="about-me">
+                        <AboutMe />
+                    </section>
+                    <section id="services">
+                        <CoreServices />
+                    </section>
+                    <section id="faq">
+                        <FAQ />
+                    </section>
+                    <section id="contact">
+                        <CTA />
+                    </section>
+                </Suspense>
             </main>
-            <Footer />
+            <Suspense fallback={<div className="h-20 bg-apex-navy"></div>}>
+                <Footer />
+            </Suspense>
         </>
     );
 };
