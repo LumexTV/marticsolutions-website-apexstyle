@@ -30,7 +30,7 @@ const Logo: React.FC<LogoProps> = ({ size = 'md', showText = true, className = '
       <div className={`${sizeClasses[size]} relative`}>
         {/* Logo ohne Hintergrund */}
         <img
-          src="/images/logo-mobile.webp"
+          src="/images/logo-no-bg.png"
           alt="Martic Solutions Logo"
           className="w-full h-full object-contain"
           width={pixelSizes[size]}

@@ -42,9 +42,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* Text Content */}
-          <div
-            className="flex flex-col gap-8 opacity-0 animate-fade-in-right"
-            style={{ animationFillMode: 'forwards' }}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-8"
           >
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-apex-blue/10 text-apex-blue text-sm font-semibold mb-6">
@@ -95,7 +97,7 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Visual Content - 3D Flip Card Dashboard */}
           <motion.div
