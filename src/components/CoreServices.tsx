@@ -5,21 +5,21 @@ import { Cog, Users, Bot } from 'lucide-react';
 const CoreServices = () => {
     const services = [
         {
-            icon: Users,
-            title: "B2B Lead-Generierung",
-            description: "Wir entwickeln skalierbare Systeme, die passende Accounts identifizieren und qualifizieren. Verifizierte Daten, vorhersehbares Umsatzwachstum.",
+            icon: Bot,
+            title: "KI-Fulfillment",
+            description: "Ihre digitale Belegschaft: 24/7 Systeme, die das Fulfillment und die Umsetzung im großen Umfang übernehmen. Schnellere Ausführung, niedrigere Kosten pro Kunde.",
             position: "top-center"
         },
         {
             icon: Cog,
-            title: "Prozess-Automatisierungen",
-            description: "Wir eliminieren manuelle, wiederkehrende Aufgaben – damit Ihr Team sich auf wertschöpfende Arbeit konzentrieren kann. Weniger Chaos, mehr Fokus.",
+            title: "Agentur-Automatisierungen",
+            description: "Wir eliminieren manuelle, wiederkehrende Aufgaben in der Kundenbetreuung – damit Ihr Team sich auf Strategie konzentrieren kann. Weniger Chaos, mehr Fokus.",
             position: "top-left"
         },
         {
-            icon: Bot,
-            title: "KI-Mitarbeiter",
-            description: "Ihre digitale Belegschaft: 24/7 Mitarbeiter, die Geschäftstätigkeiten im großen Umfang übernehmen. Schnellere Ausführung, niedrigere Kosten – ohne zusätzliche Mitarbeiter.",
+            icon: Users,
+            title: "B2B Lead-Generierung",
+            description: "Wir entwickeln skalierbare Systeme, die passende Accounts für Ihre Agentur identifizieren und qualifizieren. Verifizierte Daten, vorhersehbares Umsatzwachstum.",
             position: "bottom"
         }
     ];
@@ -145,7 +145,7 @@ const CoreServices = () => {
                             </div>
                         </motion.div>
 
-                        {/* Center - B2B Lead-Generierung (positioned higher) */}
+                        {/* Center - KI-Fulfillment (positioned higher) */}
                         <div className="flex flex-col">
                             <motion.div
                                 initial={{ opacity: 0, y: -30 }}
@@ -156,7 +156,7 @@ const CoreServices = () => {
                             >
                                 <div className="group text-center bg-gradient-to-br from-white/70 to-apex-cyan/5 backdrop-blur-2xl rounded-2xl p-6 border border-apex-cyan/30 shadow-xl shadow-apex-cyan/5 hover:shadow-2xl hover:shadow-apex-cyan/20 hover:border-apex-cyan/50 transition-all">
                                     <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-apex-blue to-apex-cyan flex items-center justify-center mb-4 shadow-lg shadow-apex-cyan/40 mx-auto group-hover:scale-110 transition-transform">
-                                        <Users className="w-6 h-6 text-white" />
+                                        <Bot className="w-6 h-6 text-white" />
                                     </div>
                                     <h3 className="text-lg font-bold text-apex-navy mb-2">{services[0].title}</h3>
                                     <p className="text-apex-gray leading-relaxed text-sm">{services[0].description}</p>
@@ -164,7 +164,7 @@ const CoreServices = () => {
                             </motion.div>
                         </div>
 
-                        {/* Right - KI-Mitarbeiter */}
+                        {/* Right - B2B Lead-Generierung */}
                         <motion.div
                             initial={{ opacity: 0, x: 30 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -174,7 +174,7 @@ const CoreServices = () => {
                         >
                             <div className="group text-left bg-gradient-to-br from-white/70 to-apex-cyan/5 backdrop-blur-2xl rounded-2xl p-6 border border-apex-cyan/30 shadow-xl shadow-apex-cyan/5 hover:shadow-2xl hover:shadow-apex-cyan/20 hover:border-apex-cyan/50 transition-all">
                                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-apex-blue to-apex-cyan flex items-center justify-center mb-4 shadow-lg shadow-apex-cyan/40 group-hover:scale-110 transition-transform">
-                                    <Bot className="w-6 h-6 text-white" />
+                                    <Users className="w-6 h-6 text-white" />
                                 </div>
                                 <h3 className="text-lg font-bold text-apex-navy mb-2">{services[2].title}</h3>
                                 <p className="text-apex-gray leading-relaxed text-sm">{services[2].description}</p>

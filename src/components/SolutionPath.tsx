@@ -15,21 +15,21 @@ const SolutionPath = () => {
     const steps = [
         {
             icon: Search,
-            title: "Prozess-Analyse",
+            title: "Analysieren",
             subtitle: "Der Deep Dive",
-            desc: "Wir identifizieren Ihre teuersten Arbeitsabläufe. Gemeinsam analysieren wir Ihre Workflows, um Zeit- und Margenfresser zu eliminieren. Das Ergebnis: Eine glasklare Roadmap zur Automatisierung.",
+            desc: "Wir werfen einen genauen Blick unter die Haube: Gemeinsam analysieren wir Ihre bestehenden Agentur-Prozesse und identifizieren die zeitaufwendigsten manuellen Schritte in Ihrem Fulfillment.",
         },
         {
             icon: Cog,
-            title: "Implementierung",
-            subtitle: "Der Bau der Maschine",
-            desc: "Wir bauen Ihre digitale Infrastruktur mit modernster KI. Die Lösungen werden nahtlos integriert, sodass Ihr Team ab Tag 1 entlastet wird – ohne den laufenden Betrieb zu stören.",
+            title: "Systematisieren",
+            subtitle: "Das Fundament",
+            desc: "Im zweiten Schritt strukturieren wir Ihre Arbeitsabläufe so, dass sie bei jedem neuen Kunden exakt gleich und verlässlich ablaufen. Ohne klare Systeme gibt es keine Skalierbarkeit.",
         },
         {
             icon: Rocket,
-            title: "Autopilot",
+            title: "Automatisieren",
             subtitle: "Der Hebel",
-            desc: "Wir schalten auf Wachstum und optimieren für maximale Profitabilität. Skalieren Sie Kunden auf Knopfdruck, ohne dass Ihr Zeitaufwand wächst. Ihr Unternehmen arbeitet jetzt für Sie.",
+            desc: "Die nun systematisierten Workflows werden durch maßgeschneiderte KI-Lösungen komplett automatisiert. Ihr Fulfillment läuft nahezu von selbst und Ihr Team wird spürbar entlastet.",
         }
     ];
 
@@ -38,7 +38,7 @@ const SolutionPath = () => {
             <div className="text-center max-w-3xl mx-auto mb-32">
                 <span className="text-apex-blue font-semibold tracking-wide uppercase text-sm mb-2 block">Unser Prozess</span>
                 <h2 className="text-3xl lg:text-5xl font-bold text-apex-navy mb-6">
-                    In 3 Schritten vom Stress zu mehr Umsatz
+                    In 3 Schritten zum automatisierten Fulfillment
                 </h2>
                 <p className="text-apex-gray text-lg">
                     Mit ersten Ergebnissen innerhalb weniger Wochen.

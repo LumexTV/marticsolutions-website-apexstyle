@@ -51,16 +51,16 @@ const AboutMe = () => {
 
                         <div className="space-y-4 text-lg text-apex-gray mb-8 leading-relaxed">
                             <p>
-                                Mein Ursprung liegt in der Beratung und Implementierung von komplexen <strong className="text-apex-navy font-bold">KI-Automatisierungen und Digitalisierungsprozessen</strong> für Unternehmen und Agenturen. Das war mein Hauptgeschäft und ist bis heute meine technische Basis.
+                                Mein Ursprung liegt in der Beratung und Implementierung von komplexen <strong className="text-apex-navy font-bold">KI-Automatisierungen und Digitalisierungsprozessen</strong> für Agenturen und B2B-Dienstleister. Das war mein Hauptgeschäft und ist bis heute meine technische Basis.
                             </p>
                             <p>
-                                Der Wendepunkt kam aus eigenem Schmerz: Um Kunden für meine Automatisierungs-Projekte zu gewinnen, verbrachte ich unzählige mühsame Stunden mit manueller Kaltakquise und Lead-Recherche. Also tat ich das, was ich am besten kann, und baute mir ein automatisiertes KI-System zur Leadgenerierung.
+                                Der Wendepunkt kam, als ich erkannte, dass vor allem Agenturen immer wieder in die gleiche Falle tappen: Sie wachsen nicht profitabel, weil jeder neue Kunde unweigerlich zu mehr manuellem Aufwand im Fulfillment führt.
                             </p>
                             <p>
-                                Das Setup lieferte so extrem passgenaue B2B-Leads, dass in über <strong className="text-apex-navy font-bold">25 umgesetzten KI-Projekten</strong> bald auch meine Kunden genau dieses System haben wollten.
+                                Also tat ich das, was ich am besten kann: Ich entwickelte automatisierte KI-Systeme, die genau diese zeitfressenden operativen Kernprozesse übernehmen. Aus der Erfahrung von über <strong className="text-apex-navy font-bold">25 umgesetzten KI-Projekten</strong> entstand unsere heutige Lösung.
                             </p>
                             <p>
-                                Heute verschmelzen diese beiden Welten, Automatisierung und Leadgenerierung, nahtlos miteinander. Mit über <strong className="text-apex-navy font-bold">500.000 gescrapten B2B-Leads</strong> liefern wir dir nicht die fertige Akquise, sondern durch intelligente Prozesse exakt den Rohstoff, den dein Vertrieb braucht: <strong className="text-apex-navy font-bold">perfekt qualifizierte Leads</strong>.
+                                Heute implementieren wir maßgeschneiderte <strong className="text-apex-navy font-bold">KI-Systeme</strong>, die perfekt auf das Agenturgeschäft abgestimmt sind. Wir liefern dir keine standardisierten Tools, sondern durch intelligente Prozesse genau das, was du für Wachstum brauchst: <strong className="text-apex-navy font-bold">ein vollautomatisiertes Fulfillment</strong>.
                             </p>
                         </div>
 

@@ -54,17 +54,17 @@ const Hero = () => {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-apex-blue opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-apex-blue"></span>
                 </span>
-                Für innovative B2B-Unternehmen
+                Für Agenturen
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold font-playfair text-apex-navy leading-[1.15] mb-8 tracking-tight [text-wrap:balance]">
-                Mehr Umsatz aus deinem Vertriebsteam, weil es nur noch mit <span className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-[#102a63] drop-shadow-sm pb-1">
-                  passenden Leads
-                </span> spricht.
+                Mehr Umsatz mit deiner Agentur, weil wir dein <span className="text-transparent bg-clip-text bg-gradient-to-t from-cyan-400 to-[#102a63] drop-shadow-sm pb-1">
+                  Fulfillment
+                </span> automatisieren.
               </h1>
 
               <p className="text-xl md:text-2xl text-apex-navy max-w-3xl leading-relaxed">
-                Wir bauen dir ein <strong className="font-semibold">eigenes Lead-System</strong>, das laufend passende B2B-Leads recherchiert, filtert, bewertet und direkt in deinem CRM so sortiert, dass dein Team nur noch mit den <strong className="font-semibold">besten Kontakten</strong> spricht.
+                Wir bauen dir eine <strong className="font-semibold">maßgeschneiderte KI-Infrastruktur</strong>, die dein Agentur-Fulfillment übernimmt, sodass ihr schneller abliefert und dein Team sich auf <strong className="font-semibold">das Wesentliche</strong> konzentriert.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ const Hero = () => {
                 onClick={() => navigate('/erstgespraech')}
                 className="bg-white/40 backdrop-blur-xl border border-white/60 text-apex-navy font-bold py-4 px-8 rounded-full shadow-lg shadow-apex-blue/10 hover:bg-white/60 hover:border-white/80 hover:shadow-xl hover:shadow-apex-blue/20 transition-all flex items-center justify-center gap-2 group"
               >
-                Lead-System prüfen lassen
+                Automatisierung prüfen lassen
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
@@ -87,9 +87,9 @@ const Hero = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-4 border-t border-apex-border/50">
               {[
-                "Gezielte Lead-Recherche",
-                "Filterung & Bewertung",
-                "Saubere CRM-Übergabe"
+                "Automatisiertes Fulfillment",
+                "Höhere Gewinnmargen",
+                "Nahtlose Integration"
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2 text-sm text-apex-gray font-medium">
                   <CheckCircle2 className="w-4 h-4 text-apex-blue" />

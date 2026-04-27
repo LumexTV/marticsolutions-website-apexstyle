@@ -24,9 +24,9 @@ const PainPoints = () => {
         },
         {
             icon: Target,
-            title: "Die 'Blindflug'-Akquise",
-            problem: "Ihr Sales-Team verschwendet 70% der Zeit mit Recherche und Kaltakquise, die zum Scheitern verurteilt ist.",
-            wish: "Ihr Vertriebsteam spricht nur noch mit qualifizierten Leads und schließt Deals ab."
+            title: "Der Fulfillment-Flaschenhals",
+            problem: "Ihr Team verschwendet 70% der Zeit mit manuellen Routineaufgaben, die das Agenturwachstum ausbremsen.",
+            wish: "Ihr Fulfillment läuft vollautomatisiert, sodass Ihr Team entlastet ist und fehlerfrei für Kunden abliefert."
         },
         {
             icon: Wallet,
